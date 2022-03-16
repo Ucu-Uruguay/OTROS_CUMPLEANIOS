@@ -1,0 +1,1658 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/15/2022 10:35:56 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PROD-UCUDBS10"
+  DTS:CreatorName="UCUADM\SSLVPN-RCALVO"
+  DTS:DTSID="{FEB4D469-CBA7-4FF3-85C7-B64D3B6825B3}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{A7B20313-FD80-4188-8C79-82AB08D8EDC2}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.245.0.30.UCU.Saico_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E573AA40-992F-4FB4-B8DB-AA0E75319AA4}"
+      DTS:ObjectName="10.245.0.30.UCU.Saico_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.245.0.30;User ID=Saico_DW;Initial Catalog=UCU;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="E9ZPRx7q7g=="
+            IV="bU6SzZ+IAKI=" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc" />
+            <CipherData>
+              <CipherValue>bU6SzZ+IAKJ6iDS58eluhdHGaPbY/Km5+n06tfb96Ctmtk5CuUpaQE3HbX5hDCvbdBNOOCcMp1ky6qWuJ0K6WXYrOHB57p/OVlgo2ZUnkkWQKEBgqF8atkiz+TntJKZhHUm79zULYLc0i8U5fFSkTwQeJn03do6NGR2SLdHiZug=</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones SMTP]"
+      DTS:CreationName="SMTP"
+      DTS:Description="Conexion correo"
+      DTS:DTSID="{CD783259-BB3C-4CD9-9F5D-355775B1B1A4}"
+      DTS:ObjectName="Administrador de conexiones SMTP">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=smtp.office365.com;UseWindowsAuthentication=True;EnableSsl=True;"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CUMPLES.log]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{8A5E20D1-41BB-4731-A8F0-360BC6C85890}"
+      DTS:ObjectName="CUMPLES.log">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\ETL UCU\REGISTRO_ERRORES\CUMPLES.log" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Salida archivo plano cumples]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A2925117-44E2-4D25-809B-D0E06D49E9EB}"
+      DTS:ObjectName="Salida archivo plano cumples">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\ETL UCU\UCU_OTROS\UCU_OTROS_CUMPLES\Cumples_.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TIPO DOCUMENTO"
+              DTS:DTSID="{17DF595D-FF0F-4CFC-BBE0-E35E8905D19D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DOCUMENTO IDENTIDAD"
+              DTS:DTSID="{13847B5A-294E-4C87-8435-361933AAA62A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1ER NOMBRE"
+              DTS:DTSID="{E2F3CFAF-49F6-4B84-846B-F6B2470768DE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="2DO NOMBRE"
+              DTS:DTSID="{79E834D9-AFEB-4812-993F-4CA295273944}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1ER APELLIDO"
+              DTS:DTSID="{F9B00C4B-5BEE-4184-B49F-F92BC4EB66DE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FECHA NACIMIENTO"
+              DTS:DTSID="{2015E326-3DB5-4A68-AFB1-303611FF66A5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CORREO ELECTRONICO INSTITUCION"
+              DTS:DTSID="{7FDB38C0-8B77-4B11-8775-583A7044BD6D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DESC CENTRO COSTO (CAR)"
+              DTS:DTSID="{D9A79795-5038-40A2-9154-E116ECB9695C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FUNID"
+              DTS:DTSID="{01D08048-9861-4C4B-8FF5-43FD9CAE2AD6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nº FUNCIONARIO"
+              DTS:DTSID="{FEED43AC-191D-46D6-84BE-D99CD0607FFF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="CUMPLES.log"
+      DTS:CreationName="Microsoft.LogProviderTextFile"
+      DTS:Description="Escribe entradas del registro sobre eventos en un archivo CSV"
+      DTS:DTSID="{FDA3D543-7ECE-49E7-BEB3-FDEB14F4CC8D}"
+      DTS:ObjectName="Proveedor de registro SSIS para archivos de texto">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{18C56CF0-2B2D-4A30-B11E-3214FAC4B89A}"
+      DTS:ObjectName="AdministradorDeConexionesSMTP_ConnectionString">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">SmtpServer=smtp.office365.com;UseWindowsAuthentication=False;EnableSsl=True;user=ucubi@ucu.edu.uy;password=UUJys%UTaM;</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{2C5783B8-D5B8-493D-A218-2380D75C4E9C}"
+      DTS:ObjectName="AdministradorDeConexionesSMTP_ConnectionString1">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">SmtpServer=outlook.office365.com;UseWindowsAuthentication=False;EnableSsl=True;user=ucubi@ucu.edu.uy;password=UUJys%UTaM;port=587</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{D631B459-313F-4BF1-9356-D0BAFB2996BE}"
+      DTS:ObjectName="AdministradorDeConexionesSMTP_ConnectionString2">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">SmtpServer=smtp.office365.com;UseWindowsAuthentication=False;EnableSsl=True;user=ucubi@ucu.edu.uy;password=UUJys%UTaM;port=587;</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6949E1AC-42CE-4DE7-94CA-974EDD9DD2FD}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="MailUserName">
+      <DTS:VariableValue
+        DTS:DataType="8">ucubi@ucu.edu.uy</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{33075FC1-6CE7-4E81-BDDF-4482EC89961D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="MailUserPsw">
+      <DTS:VariableValue
+        DTS:DataType="8">UUJys%UTaM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{64CE30F1-F5AD-43F9-BA9D-78E10A9356D3}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SendMailBody">
+      <DTS:VariableValue
+        DTS:DataType="8">Planilla de cumpleaños de funcionarios</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{761938C8-B18A-4DDE-9A4D-D35726B01E18}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SendMailFrom">
+      <DTS:VariableValue
+        DTS:DataType="8">ucubi@ucu.edu.uy</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{33921274-1F3E-4F2D-A4A0-1F0ABD44851F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SendMailSubject">
+      <DTS:VariableValue
+        DTS:DataType="8">Cumpleaños</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{DC9549AD-7DC1-4F31-ACCB-F7610C0CBCA0}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SendMailTo">
+      <DTS:VariableValue
+        DTS:DataType="8">ana.romero@ucu.com.uy</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FA76CFEF-2A84-4F33-A87B-278E154F5B6A}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SMTPPort">
+      <DTS:VariableValue
+        DTS:DataType="3">587</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6B15EB1E-53F8-40E5-B472-DF41A2930A01}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SmtpServer">
+      <DTS:VariableValue
+        DTS:DataType="8">smtp.office365.com</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">1,7,OnError</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{FDA3D543-7ECE-49E7-BEB3-FDEB14F4CC8D}" />
+    </DTS:SelectedLogProviders>
+  </DTS:LoggingOptions>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Enviar correo"
+      DTS:CreationName="Microsoft.SendMailTask"
+      DTS:Description="Tarea Enviar correo"
+      DTS:Disabled="True"
+      DTS:DTSID="{99D47C78-E607-4311-9A96-36EE14227EC7}"
+      DTS:ExecutableType="Microsoft.SendMailTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Enviar correo"
+      DTS:TaskContact="Send Mail Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <SendMailTask:SendMailTaskData
+          SendMailTask:SMTPServer="{CD783259-BB3C-4CD9-9F5D-355775B1B1A4}"
+          SendMailTask:From="ana.romero@ucu.edu.uy"
+          SendMailTask:To="ana.romero@ucu.edu.uy"
+          SendMailTask:Subject="Cumpleaños"
+          SendMailTask:MessageSource="Planilla de cumpleaños de funcionarios" xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask">
+          <SendMailTask:Attachments
+            SendMailTask:FileName="C:\ETL UCU\UCU_OTROS\UCU_OTROS_CUMPLES\Cumples_.txt" />
+        </SendMailTask:SendMailTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de datos"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{3FA3C5BD-1B0B-433B-A07E-2C11561124B1}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Flujo de datos"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Flujo de datos\Crea archivo csv"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destino de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de archivo plano"
+              localeId="3082"
+              name="Crea archivo csv">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si los datos sobrescriben el archivo de destino o se anexan al mismo."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el texto para escribir en el archivo de destino antes de escribir ningún dato."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Cuando el calificador de texto está habilitado, especifica si este contendrá secuencias de escape o no en los datos escritos en el archivo de destino."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Crea archivo csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Salida archivo plano cumples]"
+                  connectionManagerRefId="Package.ConnectionManagers[Salida archivo plano cumples]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano]"
+                  hasSideEffects="true"
+                  name="Entrada de destino de archivo plano">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[TIPO DOCUMENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="TIPO DOCUMENTO"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[TIPO DOCUMENTO]"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[TIPO DOCUMENTO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[DOCUMENTO IDENTIDAD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="DOCUMENTO IDENTIDAD"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[DOCUMENTO IDENTIDAD]"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[DOCUMENTO IDENTIDAD]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[1ER NOMBRE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="1ER NOMBRE"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[1ER NOMBRE]"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[1ER NOMBRE]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[2DO NOMBRE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="2DO NOMBRE"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[2DO NOMBRE]"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[2DO NOMBRE]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[1ER APELLIDO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="1ER APELLIDO"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[1ER APELLIDO]"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[1ER APELLIDO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[FECHA NACIMIENTO]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FECHA NACIMIENTO"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[FECHA NACIMIENTO]"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[FECHA NACIMIENTO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[CORREO ELECTRONICO INSTITUCION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="CORREO ELECTRONICO INSTITUCION"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[CORREO ELECTRONICO INSTITUCION]"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[CORREO ELECTRONICO INSTITUCION]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[DESC CENTRO COSTO (CAR)]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DESC CENTRO COSTO (CAR)"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[DESC CENTRO COSTO (CAR)]"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[DESC CENTRO COSTO (CAR)]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[FUNID]"
+                      cachedDataType="i4"
+                      cachedName="FUNID"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[FUNID]"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[FUNID]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[Nº FUNCIONARIO]"
+                      cachedDataType="i4"
+                      cachedName="Nº FUNCIONARIO"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Nº FUNCIONARIO]"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[Nº FUNCIONARIO]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[TIPO DOCUMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="TIPO DOCUMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[DOCUMENTO IDENTIDAD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="DOCUMENTO IDENTIDAD" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[1ER NOMBRE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="1ER NOMBRE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[2DO NOMBRE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="2DO NOMBRE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[1ER APELLIDO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="1ER APELLIDO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[FECHA NACIMIENTO]"
+                      dataType="dbTimeStamp"
+                      name="FECHA NACIMIENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[CORREO ELECTRONICO INSTITUCION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="CORREO ELECTRONICO INSTITUCION" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[DESC CENTRO COSTO (CAR)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="DESC CENTRO COSTO (CAR)" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[FUNID]"
+                      dataType="i4"
+                      name="FUNID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Nº FUNCIONARIO]"
+                      dataType="i4"
+                      name="Nº FUNCIONARIO" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Funcionarios SAICO"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Funcionarios SAICO"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 'CI' AS [TIPO DOCUMENTO], TRIM(FUNCIONA.FUNDOCUMNR) AS [DOCUMENTO IDENTIDAD],
+TRIM(FUNCIONA.FUNNOM1) AS [1ER NOMBRE],
+TRIM(FUNCIONA.FUNNOM2) AS [2DO NOMBRE], TRIM(FUNCIONA.FUNAPE1) AS [1ER APELLIDO],
+FUNCIONA.FUNNACIM AS [FECHA NACIMIENTO], TRIM(FUNATRVAF14.FUNAVALOR) AS [CORREO ELECTRONICO INSTITUCION],
+TRIM(CENTROCOF.CCDESC) AS [DESC CENTRO COSTO (CAR)],FUNCIONA.FUNID,FUNCIONA.FUNID AS [Nº FUNCIONARIO]
+
+FROM (((FUNCIONA LEFT JOIN CARGOSFU ON FUNCIONA.FUNID=CARGOSFU.FUNID) 
+LEFT JOIN CARGOSCC ON CARGOSCC.FUNID=CARGOSFU.FUNID AND CARGOSCC.FUNAL=CARGOSFU.FUNAL) 
+LEFT JOIN CENTROCO CENTROCOF ON CENTROCOF.CCID=CARGOSCC.FUNCCID) 
+LEFT JOIN FUNATRVA FUNATRVAF14 ON (FUNATRVAF14.FUNID=FUNCIONA.FUNID AND FUNATRVAF14.FUNAL=0 AND FUNATRVAF14.FUNAID=14) 
+
+WHERE NOT(year(FUNFECBAJA) &gt;= year(getdate())-20 AND year(FUNFECBAJA) &lt;= year(getdate())) AND NOT(FUNCARID = 37 OR FUNCARID = 169 OR FUNCARID = 682 OR FUNCARID = 683 OR FUNCARID = 681 OR 
+FUNCARID = 684 OR FUNCARID = 685 OR FUNCARID = 41 OR FUNCARID = 36 OR FUNCARID = 35 OR FUNCARID = 40 OR FUNCARID = 11 OR FUNCARID = 38 OR FUNCARID = 42 OR 
+FUNCARID = 34 OR FUNCARID = 680 OR FUNCARID = 39 OR FUNCARID = 12 OR FUNCARID = 13 OR FUNCARID = 10 OR FUNCARID = 16) AND NOT(FUNCIONA.FUNID = 0)
+AND CARGOSFU.FunAL&lt;100</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.245.0.30.UCU.Saico_DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.245.0.30.UCU.Saico_DW]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[TIPO DOCUMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[TIPO DOCUMENTO]"
+                      length="2"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[TIPO DOCUMENTO]"
+                      name="TIPO DOCUMENTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[DOCUMENTO IDENTIDAD]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[DOCUMENTO IDENTIDAD]"
+                      length="15"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[DOCUMENTO IDENTIDAD]"
+                      name="DOCUMENTO IDENTIDAD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[1ER NOMBRE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[1ER NOMBRE]"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[1ER NOMBRE]"
+                      name="1ER NOMBRE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[2DO NOMBRE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[2DO NOMBRE]"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[2DO NOMBRE]"
+                      name="2DO NOMBRE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[1ER APELLIDO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[1ER APELLIDO]"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[1ER APELLIDO]"
+                      name="1ER APELLIDO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[FECHA NACIMIENTO]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[FECHA NACIMIENTO]"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[FECHA NACIMIENTO]"
+                      name="FECHA NACIMIENTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[CORREO ELECTRONICO INSTITUCION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[CORREO ELECTRONICO INSTITUCION]"
+                      length="200"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[CORREO ELECTRONICO INSTITUCION]"
+                      name="CORREO ELECTRONICO INSTITUCION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[DESC CENTRO COSTO (CAR)]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[DESC CENTRO COSTO (CAR)]"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[DESC CENTRO COSTO (CAR)]"
+                      name="DESC CENTRO COSTO (CAR)"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[FUNID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[FUNID]"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[FUNID]"
+                      name="FUNID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[Nº FUNCIONARIO]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[Nº FUNCIONARIO]"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[Nº FUNCIONARIO]"
+                      name="Nº FUNCIONARIO"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[TIPO DOCUMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="TIPO DOCUMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[DOCUMENTO IDENTIDAD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="DOCUMENTO IDENTIDAD" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[1ER NOMBRE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="1ER NOMBRE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[2DO NOMBRE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="2DO NOMBRE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[1ER APELLIDO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="1ER APELLIDO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[FECHA NACIMIENTO]"
+                      dataType="dbTimeStamp"
+                      name="FECHA NACIMIENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[CORREO ELECTRONICO INSTITUCION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="CORREO ELECTRONICO INSTITUCION" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[DESC CENTRO COSTO (CAR)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="DESC CENTRO COSTO (CAR)" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[FUNID]"
+                      dataType="i4"
+                      name="FUNID" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[Nº FUNCIONARIO]"
+                      dataType="i4"
+                      name="Nº FUNCIONARIO" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[TIPO DOCUMENTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[TIPO DOCUMENTO]"
+                      name="TIPO DOCUMENTO" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[DOCUMENTO IDENTIDAD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[DOCUMENTO IDENTIDAD]"
+                      name="DOCUMENTO IDENTIDAD" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[1ER NOMBRE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[1ER NOMBRE]"
+                      name="1ER NOMBRE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[2DO NOMBRE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[2DO NOMBRE]"
+                      name="2DO NOMBRE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[1ER APELLIDO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[1ER APELLIDO]"
+                      name="1ER APELLIDO" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[FECHA NACIMIENTO]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[FECHA NACIMIENTO]"
+                      name="FECHA NACIMIENTO" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[CORREO ELECTRONICO INSTITUCION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[CORREO ELECTRONICO INSTITUCION]"
+                      name="CORREO ELECTRONICO INSTITUCION" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[DESC CENTRO COSTO (CAR)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[DESC CENTRO COSTO (CAR)]"
+                      name="DESC CENTRO COSTO (CAR)" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[FUNID]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[FUNID]"
+                      name="FUNID" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[Nº FUNCIONARIO]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[Nº FUNCIONARIO]"
+                      name="Nº FUNCIONARIO" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
+              endId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Script"
+      DTS:CreationName="Microsoft.ScriptTask"
+      DTS:Description="Tarea Script"
+      DTS:DTSID="{A71E79B7-9AC0-4BF7-BADC-38C02C43A942}"
+      DTS:ExecutableType="Microsoft.ScriptTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Script"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ScriptProject
+          Name="ST_06cc5f464b7d4db687a92484645d096e"
+          VSTAMajorVersion="14"
+          VSTAMinorVersion="0"
+          Language="CSharp"
+          ReadOnlyVariables="User::MailUserName,User::MailUserPsw,User::SendMailBody,User::SendMailFrom,User::SendMailSubject,User::SendMailTo,User::SMTPPort,User::SmtpServer">
+          <ProjectItem
+            Name="Properties\Resources.resx"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_06cc5f464b7d4db687a92484645d096e.Properties.Settings.get_Default():ST_06cc5f464b7d4db687a92484645d096e.Properties.Sett" +
+    "ings")]
+
+namespace ST_06cc5f464b7d4db687a92484645d096e.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <ProjectItem
+            Name="ST_06cc5f464b7d4db687a92484645d096e.csproj"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7A33C013-5F94-4613-9E96-471B46AD6886}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ST_06cc5f464b7d4db687a92484645d096e</RootNamespace>
+    <AssemblyName>ST_06cc5f464b7d4db687a92484645d096e</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptMain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptTask" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_ST130</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
+          <ProjectItem
+            Name="ScriptMain.cs"
+            Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
+/* The Script Task allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services control flow. 
+ * 
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script task. */
+#endregion
+
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Runtime;
+using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
+using System.Diagnostics;
+#endregion
+
+namespace ST_06cc5f464b7d4db687a92484645d096e
+{
+    /// <summary>
+    /// ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+    /// or parent of this class.
+    /// </summary>
+	[Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute]
+	public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+	{
+        #region Help:  Using Integration Services variables and parameters in a script
+        /* To use a variable in this script, first ensure that the variable has been added to 
+         * either the list contained in the ReadOnlyVariables property or the list contained in 
+         * the ReadWriteVariables property of this script task, according to whether or not your
+         * code needs to write to the variable.  To add the variable, save this script, close this instance of
+         * Visual Studio, and update the ReadOnlyVariables and 
+         * ReadWriteVariables properties in the Script Transformation Editor window.
+         * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+         * 
+         * Example of reading from a variable:
+         *  DateTime startTime = (DateTime) Dts.Variables["System::StartTime"].Value;
+         * 
+         * Example of writing to a variable:
+         *  Dts.Variables["User::myStringVariable"].Value = "new value";
+         * 
+         * Example of reading from a package parameter:
+         *  int batchId = (int) Dts.Variables["$Package::batchId"].Value;
+         *  
+         * Example of reading from a project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].Value;
+         * 
+         * Example of reading from a sensitive project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].GetSensitiveValue();
+         * */
+
+        #endregion
+
+        #region Help:  Firing Integration Services events from a script
+        /* This script task can fire events for logging purposes.
+         * 
+         * Example of firing an error event:
+         *  Dts.Events.FireError(18, "Process Values", "Bad value", "", 0);
+         * 
+         * Example of firing an information event:
+         *  Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, ref fireAgain)
+         * 
+         * Example of firing a warning event:
+         *  Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0);
+         * */
+        #endregion
+
+        #region Help:  Using Integration Services connection managers in a script
+        /* Some types of connection managers can be used in this script task.  See the topic 
+         * "Working with Connection Managers Programatically" for details.
+         * 
+         * Example of using an ADO.Net connection manager:
+         *  object rawConnection = Dts.Connections["Sales DB"].AcquireConnection(Dts.Transaction);
+         *  SqlConnection myADONETConnection = (SqlConnection)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Sales DB"].ReleaseConnection(rawConnection);
+         *
+         * Example of using a File connection manager
+         *  object rawConnection = Dts.Connections["Prices.zip"].AcquireConnection(Dts.Transaction);
+         *  string filePath = (string)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Prices.zip"].ReleaseConnection(rawConnection);
+         * */
+        #endregion
+
+
+		/// <summary>
+        /// This method is called when this script task executes in the control flow.
+        /// Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+        /// To open Help, press F1.
+        /// </summary>
+		public void Main()
+		{
+            // Storing SSIS variables in .Net variables. You could skip this step and call the SSIS variables in the actual mail code
+            // to reduce the number of code lines. Or you could fill these .Net variables with hardcoded values.
+            String SendMailFrom = Dts.Variables["SendMailFrom"].Value.ToString();
+            String SendMailTo = Dts.Variables["SendMailTo"].Value.ToString();
+            String SendMailSubject = Dts.Variables["SendMailSubject"].Value.ToString();
+            String SendMailBody = Dts.Variables["SendMailBody"].Value.ToString();
+            String MailUserName = Dts.Variables["MailUserName"].Value.ToString();
+            String MailUserPsw = Dts.Variables["MailUserPsw"].Value.ToString();
+
+            // Get SMTP Server from SMTP Connection Manager. Alternative is to use extra variables or paramters instead:
+            String SmtpServer = Dts.Variables["SmtpServer"].Value.ToString();
+            // String SmtpServer = Dts.Connections["Administrador de conexiones SMTP"].Properties["SmtpServer"].GetValue(Dts.Connections["Administrador de conexiones SMTP"]).ToString();
+            int SMTPPort;
+            Int32.TryParse(Dts.Variables["SMTPPort"].Value.ToString(), out SMTPPort);
+
+            // Create an email and change the format to HTML
+            MailMessage myHtmlFormattedMail = new MailMessage(SendMailFrom, SendMailTo, SendMailSubject, SendMailBody)
+            {
+                IsBodyHtml = false
+            };
+
+            //Attach
+            myHtmlFormattedMail.Attachments.Add(new Attachment("C:\\ETL UCU\\UCU_OTROS\\UCU_OTROS_CUMPLES\\Cumples_.csv"));
+
+            //Habilito TLS 1.2
+            System.Net.ServicePointManager.SecurityProtocol = (System.Net.SecurityProtocolType)3072;
+
+            // Create a SMTP client to send the email
+            using (SmtpClient mySmtpClient = new SmtpClient(SmtpServer, SMTPPort))
+            {
+                mySmtpClient.UseDefaultCredentials = false;
+                mySmtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+                mySmtpClient.EnableSsl = true;
+                mySmtpClient.Credentials = new NetworkCredential(MailUserName, MailUserPsw);
+                //mySmtpClient.Send(myHtmlFormattedMail);
+                try
+                {
+                    mySmtpClient.Send(myHtmlFormattedMail);
+                }
+                catch (Exception e)
+                {
+                    Debug.WriteLine(e);
+                    Console.WriteLine(e.ToString());
+                }
+            };
+            Dts.TaskResult = (int)ScriptResults.Success;
+        }
+
+        #region ScriptResults declaration
+
+        enum ScriptResults
+        {
+            Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success,
+            Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+        };
+        #endregion
+
+	}
+}]]></ProjectItem>
+          <ProjectItem
+            Name="Project"
+            Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:CodeName>ST_06cc5f464b7d4db687a92484645d096e</msb:CodeName>
+		<msb:Language>msBuild</msb:Language>
+		<msb:DisplayName>ST_06cc5f464b7d4db687a92484645d096e</msb:DisplayName>
+		<msb:ProjectId>{2108B055-F505-4726-B162-D46E88CEA6F9}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="ST_06cc5f464b7d4db687a92484645d096e.csproj"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Settings.settings"/>
+		<msb:File Include="Properties\Resources.resx"/>
+		<msb:File Include="Properties\Resources.Designer.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="ScriptMain.cs"/>
+	</msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_06cc5f464b7d4db687a92484645d096e")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_06cc5f464b7d4db687a92484645d096e")]
+[assembly: AssemblyCopyright("Copyright @  2022")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Resources.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_06cc5f464b7d4db687a92484645d096e.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_06cc5f464b7d4db687a92484645d096e.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_06cc5f464b7d4db687a92484645d096e.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace ST_06cc5f464b7d4db687a92484645d096e.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ST_06cc5f464b7d4db687a92484645d096e.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <BinaryItem
+            Name="ST_06cc5f464b7d4db687a92484645d096e.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAIQAMmIAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAA2jIA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAIgyAABPAAAAAEAAAHgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA4BIAAAAgAAAAFAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAHgEAAAAQAAAAAYAAAAWAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAC8
+MgAAAAAAAEgAAAACAAUAfCIAAFQPAAABAAAAAAAAANAxAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAABswBQCbAQAAAQAAEQIoEAAACm8RAAAKcgEAAHBvEgAACm8T
+AAAKbxQAAAoKAigQAAAKbxEAAApyGwAAcG8SAAAKbxMAAApvFAAACgsCKBAAAApvEQAACnIxAABw
+bxIAAApvEwAACm8UAAAKDAIoEAAACm8RAAAKclEAAHBvEgAACm8TAAAKbxQAAAoNAigQAAAKbxEA
+AApyawAAcG8SAAAKbxMAAApvFAAAChMEAigQAAAKbxEAAApyhQAAcG8SAAAKbxMAAApvFAAAChMF
+AigQAAAKbxEAAApynQAAcG8SAAAKbxMAAApvFAAACgIoEAAACm8RAAAKcrMAAHBvEgAACm8TAAAK
+bxQAAAoSBigVAAAKJgYHCAlzFgAACiUWbxcAAAoTBxEHbxgAAApyxQAAcHMZAAAKbxoAAAogAAwA
+ACgbAAAKEQZzHAAAChMIEQgWbx0AAAoRCBZvHgAAChEIF28fAAAKEQgRBBEFcyAAAApvIQAAChEI
+EQdvIgAACt4YbxQAAAooIwAACt4MEQgsBxEIbyQAAArcAigQAAAKFm8lAAAKKgABHAAAAABrAQt2
+AQwRAAABAgBDAT+CAQwAAAAAHgIoJgAACioeAignAAAKKq5+AQAABC0eci0BAHDQAwAAAigoAAAK
+bykAAApzKgAACoABAAAEfgEAAAQqGn4CAAAEKh4CgAIAAAQqGn4DAAAEKh4CKCsAAAoqLnMIAAAG
+gAMAAAQqAABCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAFAGwAAAB4BAAAI34AAOQEAAD8
+BgAAI1N0cmluZ3MAAAAA4AsAAKABAAAjVVMAgA0AABAAAAAjR1VJRAAAAJANAADEAQAAI0Jsb2IA
+AAAAAAAAAgAAAVcdogkJAwAAAPoBMwAWAAABAAAAKwAAAAUAAAAGAAAACQAAAAEAAAArAAAAAgAA
+ABAAAAABAAAAAgAAAAMAAAAEAAAAAQAAAAEAAAAEAAAAAQAAAAEAAAAAAEMEAQAAAAAABgCyAngF
+BgBBA3gFBgD+AWUFDwDsBQAABgArAvMEBgCVAvMEBgB2AvMEBgAoA/MEBgDSAvMEBgDrAvMEBgBC
+AvMEBgBdAm8DCgAGA7EDCgBsAbEDDgCwADMEDgDGBjMEBgAaBaYEBgCtBKYEBgDhAWUFBgCZBqYE
+BgA0BZgFBgAkBd4EDgCxAR0EDgASAh0EDgCIAckEBgDGAXgFCgALBLEDEgAuBv0AEgC8AP0ABgAO
+AKYEDgAFBTMEDgDRBjMEBgABAOwDDgBEBaAGDgAnAaAGDgBpADMEDgDaA6AGDgDcBqAGBgD1AKYE
+BgDFAKYEBgA3AaYEBgDRAKYEBgDzBvMEAAAAABQAAAAAAAEAAQABABAAvgR8ADkAAQABAAAAEACf
+BfsFUQABAAMAAAEQADgG+wVlAAMABwADAQAAewYAAEkABAAKABEAsgTIABEAXAHMABEAoADQAAYG
+PADUAFaAawbXAFaAPAHXAFAgAAAAAIYAxAQGAAEAFCIAAAAAhhhYBQYAAQAcIgAAAACDGFgFBgAB
+ACQiAAAAAJMIMAXbAAEAUCIAAAAAkwhEAeAAAQBXIgAAAACTCFAB5QABAF8iAAAAAJYIqwbrAAIA
+ZiIAAAAAhhhYBQYAAgBuIgAAAACRGF4F8AACAAAAAQBpAwkAWAUBABEAWAUGABkAWAUKACkAWAUQ
+ADEAWAUQADkAWAUQAEEAWAUQAEkAWAUQAFEAWAUQAFkAWAUQAGEAWAUQAGkAWAUGAJkAWAUGAMEA
+WAUVANEAWAUGAHEAcwYpANkAKgYuAOEAnQQzAOkAXwM5AKEAiQM9APEAqAFBAHkAWAVIAHkAawRQ
+AHkAiQZVAAEBWAUQAAwATQBjABEBegRpAIEAWAVwAIEAUQZQAIEAVgB2AIEAjwRQACkBWAV9AIEA
+QQaDAIEAUQCKADkBHQGQAEEBoAEGANkAtwYBAHEAWAUGAKEAWAUGAEkB4wCVAEkB7waeAKkAWAWk
+AMkAWAUGAAgAFAC+AAgAGADDACkAcwArAS4ACwADAS4AEwAMAS4AGwArAS4AIwA0AS4AKwBdAS4A
+MwBdAS4AOwBdAS4AQwA0AS4ASwBjAS4AUwBdAS4AWwB6AUMAYwDDAEkAcwArAWEAewDDAGMAawDD
+ABsAAwABAAQAAwAAADQF9AAAAGQB+QAAAK8G/gACAAQAAwACAAUABQABAAYABQACAAcABwBaAASA
+AAABAAAArh/qVgAAAAAAAHwAAAAEAAAAAAAAAAAAAACsAEQAAAAAAA0AAAAAAAAAAAAAALUAkgMA
+AAAABAAAAAAAAAAAAAAArACmBAAAAAANAAAAAAAAAAAAAAC1AB0AAAAAAAAAAAABAAAAqQUAAAUA
+AgAAAAAAAENvbGxlY3Rpb25gMQBJbnQzMgA8TW9kdWxlPgBNaWNyb3NvZnQuU3FsU2VydmVyLk1h
+bmFnZWREVFMAdmFsdWVfXwBtc2NvcmxpYgBBZGQAU2VuZABzZXRfRGVsaXZlcnlNZXRob2QAU210
+cERlbGl2ZXJ5TWV0aG9kAFNUXzA2Y2M1ZjQ2NGI3ZDRkYjY4N2E5MjQ4NDY0NWQwOTZlAGRlZmF1
+bHRJbnN0YW5jZQBNYWlsTWVzc2FnZQBWYXJpYWJsZQBJRGlzcG9zYWJsZQBSdW50aW1lVHlwZUhh
+bmRsZQBHZXRUeXBlRnJvbUhhbmRsZQBDb25zb2xlAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlJ1
+bnRpbWUAV3JpdGVMaW5lAFNlY3VyaXR5UHJvdG9jb2xUeXBlAEZhaWx1cmUAZ2V0X0N1bHR1cmUA
+c2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAFZTVEFSVFNjcmlwdE9iamVjdE1vZGVsQmFzZQBB
+cHBsaWNhdGlvblNldHRpbmdzQmFzZQBEaXNwb3NlAFRyeVBhcnNlAEVkaXRvckJyb3dzYWJsZVN0
+YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1
+dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlU
+aXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtB
+dHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRp
+b25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1
+Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAU1NJU1NjcmlwdFRhc2tFbnRy
+eVBvaW50QXR0cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJp
+bGl0eUF0dHJpYnV0ZQBnZXRfVmFsdWUAdmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBU
+b1N0cmluZwBNaWNyb3NvZnQuU3FsU2VydmVyLlNjcmlwdFRhc2sATWljcm9zb2Z0LlNxbFNlcnZl
+ci5EdHMuVGFza3MuU2NyaXB0VGFzawBOZXR3b3JrQ3JlZGVudGlhbABTeXN0ZW0uQ29sbGVjdGlv
+bnMuT2JqZWN0TW9kZWwAU2NyaXB0T2JqZWN0TW9kZWwAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFN5
+c3RlbS5OZXQuTWFpbABTVF8wNmNjNWY0NjRiN2Q0ZGI2ODdhOTI0ODQ2NDVkMDk2ZS5kbGwAc2V0
+X0lzQm9keUh0bWwAc2V0X1NlY3VyaXR5UHJvdG9jb2wAc2V0X0VuYWJsZVNzbABnZXRfSXRlbQBT
+eXN0ZW0ARW51bQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAFN5c3RlbS5Db25maWd1cmF0aW9uAFN5
+c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0aW9uAEF0dGFjaG1lbnRDb2xsZWN0aW9u
+AEV4Y2VwdGlvbgBDdWx0dXJlSW5mbwBnZXRfUmVzb3VyY2VNYW5hZ2VyAFNlcnZpY2VQb2ludE1h
+bmFnZXIALmN0b3IALmNjdG9yAFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21w
+aWxlclNlcnZpY2VzAFN5c3RlbS5SZXNvdXJjZXMAU1RfMDZjYzVmNDY0YjdkNGRiNjg3YTkyNDg0
+NjQ1ZDA5NmUuUHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNU
+XzA2Y2M1ZjQ2NGI3ZDRkYjY4N2E5MjQ4NDY0NWQwOTZlLlByb3BlcnRpZXMAZ2V0X1ZhcmlhYmxl
+cwBTZXR0aW5ncwBzZXRfQ3JlZGVudGlhbHMAc2V0X1VzZURlZmF1bHRDcmVkZW50aWFscwBTdWNj
+ZXNzAGdldF9EdHMAU2NyaXB0UmVzdWx0cwBnZXRfQXR0YWNobWVudHMAT2JqZWN0AFN5c3RlbS5O
+ZXQAZ2V0X0RlZmF1bHQAc2V0X1Rhc2tSZXN1bHQAU210cENsaWVudABBdHRhY2htZW50AElDcmVk
+ZW50aWFsc0J5SG9zdABnZXRfQXNzZW1ibHkAABlTAGUAbgBkAE0AYQBpAGwARgByAG8AbQAAFVMA
+ZQBuAGQATQBhAGkAbABUAG8AAB9TAGUAbgBkAE0AYQBpAGwAUwB1AGIAagBlAGMAdAAAGVMAZQBu
+AGQATQBhAGkAbABCAG8AZAB5AAAZTQBhAGkAbABVAHMAZQByAE4AYQBtAGUAABdNAGEAaQBsAFUA
+cwBlAHIAUABzAHcAABVTAG0AdABwAFMAZQByAHYAZQByAAARUwBNAFQAUABQAG8AcgB0AABnQwA6
+AFwARQBUAEwAIABVAEMAVQBcAFUAQwBVAF8ATwBUAFIATwBTAFwAVQBDAFUAXwBPAFQAUgBPAFMA
+XwBDAFUATQBQAEwARQBTAFwAQwB1AG0AcABsAGUAcwBfAC4AYwBzAHYAAHFTAFQAXwAwADYAYwBj
+ADUAZgA0ADYANABiADcAZAA0AGQAYgA2ADgANwBhADkAMgA0ADgANAA2ADQANQBkADAAOQA2AGUA
+LgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAGr9o5u5JjQL4Dgqqc
+ozHkAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFdDQcJDg4ODg4OCBI9EkEEIAASbQQgABJxBSAB
+EnUcAyAAHAMgAA4GAAICDhAIByAEAQ4ODg4EIAEBAgQgABJ9CBUSgIUBEoCBBSABARMABgABARGA
+jQUgAgEOCAYgAQERgJEFIAIBDg4GIAEBEoCZBSABARI9BAABAQ4IAAESgKURgKkFIAASgK0HIAIB
+DhKArQi3elxWGTTgiQiJhF3NgIDMkQQAAAAABAEAAAADBhJVAwYSWQMGEhACBggDBhEUBAAAElUE
+AAASWQUAAQESWQQAABIQAwAAAQQIABJVBAgAElkECAASEAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5v
+bkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU1RfMDZjYzVmNDY0YjdkNGRiNjg3YTkyNDg0
+NjQ1ZDA5NmUAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMgAASQEAGi5ORVRGcmFtZXdvcmss
+VmVyc2lvbj12NC41AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjW0
+AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGli
+LCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVj
+NTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAA
+AFBBRFBBRFC0AAAAsDIAAAAAAAAAAAAAyjIAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAALwyAAAA
+AAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
+SAAAAFhAAAAaBAAAAAAAAAAAAAAaBDQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
+AAAAvQTv/gAAAQAAAAEA6lauHwAAAQDqVq4fPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
+AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
+AAAAAAAAALAEegMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAVgMAAAEAMAAwADAA
+MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
+AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
+AABTAFQAXwAwADYAYwBjADUAZgA0ADYANABiADcAZAA0AGQAYgA2ADgANwBhADkAMgA0ADgANAA2
+ADQANQBkADAAOQA2AGUAAAA+AA8AAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
+OAAxADEAMAAuADIAMgAyADUAMAAAAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABT
+AFQAXwAwADYAYwBjADUAZgA0ADYANABiADcAZAA0AGQAYgA2ADgANwBhADkAMgA0ADgANAA2ADQA
+NQBkADAAOQA2AGUALgBkAGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAA
+AEMAbwBwAHkAcgBpAGcAaAB0ACAAQAAgACAAMgAwADIAMgAAACoAAQABAEwAZQBnAGEAbABUAHIA
+YQBkAGUAbQBhAHIAawBzAAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBh
+AG0AZQAAAFMAVABfADAANgBjAGMANQBmADQANgA0AGIANwBkADQAZABiADYAOAA3AGEAOQAyADQA
+OAA0ADYANAA1AGQAMAA5ADYAZQAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBl
+AAAAAABTAFQAXwAwADYAYwBjADUAZgA0ADYANABiADcAZAA0AGQAYgA2ADgANwBhADkAMgA0ADgA
+NAA2ADQANQBkADAAOQA2AGUAAABCAA8AAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAx
+AC4AMAAuADgAMQAxADAALgAyADIAMgA1ADAAAAAAAEYADwABAEEAcwBzAGUAbQBiAGwAeQAgAFYA
+ZQByAHMAaQBvAG4AAAAxAC4AMAAuADgAMQAxADAALgAyADIAMgA1ADAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAA3DIAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
+        </ScriptProject>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{D92E43FE-C49E-40F0-B020-990C1A9E9508}"
+      DTS:From="Package\Tarea Flujo de datos"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Tarea Script" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Tarea Enviar correo"
+          TopLeft="44.5,145.5" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Tarea Flujo de datos"
+          TopLeft="44.5,6.5" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\Tarea Script"
+          TopLeft="322.5,79.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="132.5,48.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="258,31"
+              Start="0,0"
+              End="258,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5"
+                    Point2="0,15.5"
+                    Point3="4,15.5" />
+                  <mssgle:LineSegment
+                    End="254,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="254,15.5"
+                    Point2="258,15.5"
+                    Point3="258,19.5" />
+                  <mssgle:LineSegment
+                    End="258,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tarea Flujo de datos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Tarea Flujo de datos\Crea archivo csv"
+          TopLeft="12.5,149.5" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Tarea Flujo de datos\Funcionarios SAICO"
+          TopLeft="5.5,5.5" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
+          TopLeft="91,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,102"
+              Start="0,0"
+              End="0,94.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,94.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Funcionarios SAICO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
