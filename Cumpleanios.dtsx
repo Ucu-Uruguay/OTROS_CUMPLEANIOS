@@ -12,8 +12,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="63"
-  DTS:VersionGUID="{6DF85372-1D3D-40C4-A43F-E4DF43F21579}">
+  DTS:VersionBuild="68"
+  DTS:VersionGUID="{0E56BE21-99A3-4E7D-AB31-83538ADC78B7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,12 +27,12 @@
           DTS:ConnectionString="Data Source=10.245.0.30;User ID=Saico_DW;Initial Catalog=UCU;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="fK64qyMaHg=="
-            IV="kw/BzptP3HU=" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="RZXcgmwSSg=="
+            IV="zP+S6rK+ULg=" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc" />
             <CipherData>
-              <CipherValue>kw/BzptP3HV2A0EmhxJPlgN7Hm0UTti/xsvy0ocPrMX6d+gpNY9F4QTvSjsDb88jF0/CRqnAxWT0fOMrnyUmbMmqPWXohg8kepHzTsl4vnMcVBbHRJWv2RMCHdIu4xCCXi/Vsr6Lqyj57xZz0XTFDV5L/ykJdamlEHP+fm0GQEw=</CipherValue>
+              <CipherValue>zP+S6rK+ULgSNrvwOZKF4hHBou3uXS3LruYQevuAKLoPOdu9+d795QyZR6/M6/vDWpFpHcYnMHtIIbMmLsde8zrHJ/ITxxp6cZUg7JU5UuFM9D73hgnIU6o/maBO1uPLuioBhgzyObU4mctyUYLK2SmCXQZF0JuiDXYvRJm4rns=</CipherValue>
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -83,16 +83,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TIPO DOCUMENTO"
-              DTS:DTSID="{4C29BEA9-F3C8-41C3-BF20-43CAA4CDC9D7}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="15"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="DOCUMENTO IDENTIDAD"
-              DTS:DTSID="{1CD26FBC-AA8E-4EBE-BEDB-5B92C0F6EFED}"
+              DTS:DTSID="{0B363A6D-B315-41EE-BFDC-EDFD0AA36896}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -101,7 +92,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="1ER NOMBRE"
-              DTS:DTSID="{CB9AC0C4-E9BE-4E07-BD1C-0E185B65B1D3}"
+              DTS:DTSID="{6ACCB03C-A5D4-40E5-BE64-F8E46F3DBAE7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -110,7 +101,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="2DO NOMBRE"
-              DTS:DTSID="{EABC82CC-3897-4181-ACF1-66C00395CE13}"
+              DTS:DTSID="{8446827D-1460-410D-B605-467FB8989FE7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -119,7 +110,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="1ER APELLIDO"
-              DTS:DTSID="{18B2647F-BA98-4224-A810-D2EA8DCAF684}"
+              DTS:DTSID="{E980BA72-1C6B-4D0B-B470-66169A2840F7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -127,7 +118,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="FECHA NACIMIENTO"
-              DTS:DTSID="{219D1BD7-B6F6-40AA-8758-19A2CE5A1053}"
+              DTS:DTSID="{5EB01F18-BA09-45F0-824C-E653667E0AE6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -136,32 +127,25 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CORREO ELECTRONICO INSTITUCION"
-              DTS:DTSID="{69EA8CD1-6094-4229-ABED-CB6AD8BABB1D}"
+              DTS:DTSID="{1F73C120-7B38-447E-BB79-A98B9DF8F4C2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="20"
+              DTS:MaximumWidth="15"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="DESC CENTRO COSTO (CAR)"
-              DTS:DTSID="{EABAF5FD-AE19-41C0-9615-C95BC109063D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="FUNID"
-              DTS:DTSID="{7319F227-E70B-4BD2-A2F1-3E7EE5563280}"
+              DTS:ObjectName="documento identidad"
+              DTS:DTSID="{05F2A238-3F4F-4325-8B3B-8FDC61A80258}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="3"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Nº FUNCIONARIO"
-              DTS:DTSID="{430EDEEA-954E-44D6-8883-9F6B20B5CD67}"
+              DTS:ObjectName="Cargo"
+              DTS:DTSID="{B4F33C4B-B82B-457A-A712-0DCC1D99E3F6}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -375,13 +359,6 @@
                       cachedName="TIPO DOCUMENTO"
                       lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[TIPO DOCUMENTO]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[DOCUMENTO IDENTIDAD]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
-                      cachedName="DOCUMENTO IDENTIDAD"
-                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[DOCUMENTO IDENTIDAD]" />
-                    <inputColumn
                       refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[1ER NOMBRE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -410,12 +387,19 @@
                       cachedName="CORREO ELECTRONICO INSTITUCION"
                       lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[CORREO ELECTRONICO INSTITUCION]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[DESC CENTRO COSTO (CAR)]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[Cargo]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="DESC CENTRO COSTO (CAR)"
-                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[DESC CENTRO COSTO (CAR)]" />
+                      cachedLength="100"
+                      cachedName="Cargo"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[Cargo]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[documento identidad]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="documento identidad"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[documento identidad]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -442,27 +426,6 @@
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
                           name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[TIPO DOCUMENTO]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DOCUMENTO IDENTIDAD]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      length="15"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DOCUMENTO IDENTIDAD]"
-                      name="Copia de DOCUMENTO IDENTIDAD"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[DOCUMENTO IDENTIDAD]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -554,20 +517,41 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DESC CENTRO COSTO (CAR)]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de Cargo]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DESC CENTRO COSTO (CAR)]"
-                      name="Copia de DESC CENTRO COSTO (CAR)"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de Cargo]"
+                      name="Copia de Cargo"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[DESC CENTRO COSTO (CAR)]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[Cargo]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de documento identidad]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="15"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de documento identidad]"
+                      name="Copia de documento identidad"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[documento identidad]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -643,31 +627,12 @@
                       externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[FECHA NACIMIENTO]"
                       lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[FECHA NACIMIENTO]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[FUNID]"
-                      cachedDataType="i4"
-                      cachedName="FUNID"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[FUNID]"
-                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[FUNID]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[Nº FUNCIONARIO]"
-                      cachedDataType="i4"
-                      cachedName="Nº FUNCIONARIO"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Nº FUNCIONARIO]"
-                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[Nº FUNCIONARIO]" />
-                    <inputColumn
                       refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[Copia de TIPO DOCUMENTO]"
                       cachedDataType="wstr"
                       cachedLength="2"
                       cachedName="Copia de TIPO DOCUMENTO"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[TIPO DOCUMENTO]"
                       lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de TIPO DOCUMENTO]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[Copia de DOCUMENTO IDENTIDAD]"
-                      cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="Copia de DOCUMENTO IDENTIDAD"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[DOCUMENTO IDENTIDAD]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DOCUMENTO IDENTIDAD]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[Copia de 1ER NOMBRE]"
                       cachedDataType="wstr"
@@ -697,12 +662,19 @@
                       externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[CORREO ELECTRONICO INSTITUCION]"
                       lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de CORREO ELECTRONICO INSTITUCION]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[Copia de DESC CENTRO COSTO (CAR)]"
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[Copia de documento identidad]"
                       cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="Copia de DESC CENTRO COSTO (CAR)"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[DESC CENTRO COSTO (CAR)]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DESC CENTRO COSTO (CAR)]" />
+                      cachedLength="15"
+                      cachedName="Copia de documento identidad"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[documento identidad]"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de documento identidad]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[Copia de Cargo]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Copia de Cargo"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Cargo]"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de Cargo]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -711,25 +683,11 @@
                       dataType="dbTimeStamp"
                       name="FECHA NACIMIENTO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[FUNID]"
-                      dataType="i4"
-                      name="FUNID" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Nº FUNCIONARIO]"
-                      dataType="i4"
-                      name="Nº FUNCIONARIO" />
-                    <externalMetadataColumn
                       refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[TIPO DOCUMENTO]"
                       codePage="65001"
                       dataType="str"
                       length="2"
                       name="TIPO DOCUMENTO" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[DOCUMENTO IDENTIDAD]"
-                      codePage="65001"
-                      dataType="str"
-                      length="15"
-                      name="DOCUMENTO IDENTIDAD" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[1ER NOMBRE]"
                       codePage="65001"
@@ -755,11 +713,17 @@
                       length="200"
                       name="CORREO ELECTRONICO INSTITUCION" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[DESC CENTRO COSTO (CAR)]"
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[documento identidad]"
                       codePage="65001"
                       dataType="str"
-                      length="20"
-                      name="DESC CENTRO COSTO (CAR)" />
+                      length="15"
+                      name="documento identidad" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Cargo]"
+                      codePage="65001"
+                      dataType="str"
+                      length="100"
+                      name="Cargo" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -789,21 +753,53 @@
                   dataType="System.String"
                   description="Comando SQL para ejecutar."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 'CI' AS [TIPO DOCUMENTO], TRIM(FUNCIONA.FUNDOCUMNR) AS [DOCUMENTO IDENTIDAD],
-TRIM(FUNCIONA.FUNNOM1) AS [1ER NOMBRE],
-TRIM(FUNCIONA.FUNNOM2) AS [2DO NOMBRE], TRIM(FUNCIONA.FUNAPE1) AS [1ER APELLIDO],
-FUNCIONA.FUNNACIM AS [FECHA NACIMIENTO], TRIM(FUNATRVAF14.FUNAVALOR) AS [CORREO ELECTRONICO INSTITUCION],
-TRIM(CENTROCOF.CCDESC) AS [DESC CENTRO COSTO (CAR)],FUNCIONA.FUNID,FUNCIONA.FUNID AS [Nº FUNCIONARIO]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select TRIM([TIPO DOCUMENTO]) [TIPO DOCUMENTO], TRIM([documento identidad]) [documento identidad], TRIM(upper([1ER NOMBRE])) [1ER NOMBRE] , TRIM(upper([2DO NOMBRE])) [2DO NOMBRE] , 
 
-FROM (((FUNCIONA LEFT JOIN CARGOSFU ON FUNCIONA.FUNID=CARGOSFU.FUNID) 
-LEFT JOIN CARGOSCC ON CARGOSCC.FUNID=CARGOSFU.FUNID AND CARGOSCC.FUNAL=CARGOSFU.FUNAL) 
-LEFT JOIN CENTROCO CENTROCOF ON CENTROCOF.CCID=CARGOSCC.FUNCCID) 
-LEFT JOIN FUNATRVA FUNATRVAF14 ON (FUNATRVAF14.FUNID=FUNCIONA.FUNID AND FUNATRVAF14.FUNAL=0 AND FUNATRVAF14.FUNAID=14) 
+TRIM(upper([1ER APELLIDO])) [1ER APELLIDO] , convert(varchar,[FECHA NACIMIENTO],23) [FECHA NACIMIENTO],
 
-WHERE NOT(year(FUNFECBAJA) &gt;= year(getdate())-20 AND year(FUNFECBAJA) &lt;= year(getdate())) AND NOT(FUNCARID = 37 OR FUNCARID = 169 OR FUNCARID = 682 OR FUNCARID = 683 OR FUNCARID = 681 OR 
-FUNCARID = 684 OR FUNCARID = 685 OR FUNCARID = 41 OR FUNCARID = 36 OR FUNCARID = 35 OR FUNCARID = 40 OR FUNCARID = 11 OR FUNCARID = 38 OR FUNCARID = 42 OR 
+TRIM(lower(coalesce([CORREO ELECTRONICO INSTITUCION], ''))) [CORREO ELECTRONICO INSTITUCION],  
+
+TRIM(upper(coalesce(min([desc centro costo (car)]), ''))) Cargo
+
+from (
+
+SELECT 'CI' AS [TIPO DOCUMENTO],FUNCIONA.FUNDOCUMNR AS [DOCUMENTO IDENTIDAD],
+
+FUNCIONA.FUNNOM1 AS [1ER NOMBRE],
+
+FUNCIONA.FUNNOM2 AS [2DO NOMBRE],FUNCIONA.FUNAPE1 AS [1ER APELLIDO],
+
+FUNCIONA.FUNNACIM AS [FECHA NACIMIENTO],FUNATRVAF14.FUNAVALOR AS [CORREO ELECTRONICO INSTITUCION],
+
+ccNodum.nom_dpto AS [DESC CENTRO COSTO (CAR)],
+
+FUNCIONA.FUNID,FUNCIONA.FUNID AS [Nº FUNCIONARIO]
+
+FROM (((FUNCIONA LEFT JOIN CARGOSFU ON FUNCIONA.FUNID=CARGOSFU.FUNID)
+
+LEFT JOIN CARGOSCC ON CARGOSCC.FUNID=CARGOSFU.FUNID AND CARGOSCC.FUNAL=CARGOSFU.FUNAL)
+
+LEFT JOIN CENTROCO CENTROCOF ON CENTROCOF.CCID=CARGOSCC.FUNCCID)
+
+left join [ucudbs09].[nodum_prod].[dbo].[ct_dptos] ccNodum on CENTROCOF.CCID = ccNodum.cod_dpto collate Modern_Spanish_CI_AS
+
+LEFT JOIN FUNATRVA FUNATRVAF14 ON (FUNATRVAF14.FUNID=FUNCIONA.FUNID AND FUNATRVAF14.FUNAL=0 AND FUNATRVAF14.FUNAID=14)
+
+WHERE NOT(FUNFECBAJA &gt;= '01/12/00' AND FUNFECBAJA &lt;= EOMONTH (getdate() ))
+
+AND NOT(FUNCARID = 37 OR FUNCARID = 169 OR FUNCARID = 682 OR FUNCARID = 683 OR FUNCARID = 681 OR
+
+FUNCARID = 684 OR FUNCARID = 685 OR FUNCARID = 41 OR FUNCARID = 36 OR FUNCARID = 35 OR FUNCARID = 40 OR FUNCARID = 11 OR FUNCARID = 38 OR FUNCARID = 42 OR
+
 FUNCARID = 34 OR FUNCARID = 680 OR FUNCARID = 39 OR FUNCARID = 12 OR FUNCARID = 13 OR FUNCARID = 10 OR FUNCARID = 16) AND NOT(FUNCIONA.FUNID = 0)
-AND CARGOSFU.FunAL&lt;100</property>
+
+AND CARGOSFU.FunAL&lt;100
+
+) GENINF01
+
+group by [TIPO DOCUMENTO], [documento identidad], [1ER NOMBRE], [2DO NOMBRE], [1ER APELLIDO], [FECHA NACIMIENTO],[CORREO ELECTRONICO INSTITUCION], [FunId]
+
+order by day([fecha nacimiento])</property>
                 <property
                   dataType="System.String"
                   description="Variable que contiene el comando SQL para ejecutar."
@@ -849,17 +845,6 @@ AND CARGOSFU.FunAL&lt;100</property>
                       length="2"
                       lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[TIPO DOCUMENTO]"
                       name="TIPO DOCUMENTO"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[DOCUMENTO IDENTIDAD]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[DOCUMENTO IDENTIDAD]"
-                      length="15"
-                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[DOCUMENTO IDENTIDAD]"
-                      name="DOCUMENTO IDENTIDAD"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[1ER NOMBRE]"
@@ -915,33 +900,26 @@ AND CARGOSFU.FunAL&lt;100</property>
                       name="CORREO ELECTRONICO INSTITUCION"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[DESC CENTRO COSTO (CAR)]"
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[documento identidad]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[DESC CENTRO COSTO (CAR)]"
-                      length="20"
-                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[DESC CENTRO COSTO (CAR)]"
-                      name="DESC CENTRO COSTO (CAR)"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[documento identidad]"
+                      length="15"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[documento identidad]"
+                      name="documento identidad"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[FUNID]"
-                      dataType="i4"
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[Cargo]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[FUNID]"
-                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[FUNID]"
-                      name="FUNID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[Nº FUNCIONARIO]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[Nº FUNCIONARIO]"
-                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[Nº FUNCIONARIO]"
-                      name="Nº FUNCIONARIO"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[Cargo]"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].Columns[Cargo]"
+                      name="Cargo"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -952,12 +930,6 @@ AND CARGOSFU.FunAL&lt;100</property>
                       dataType="str"
                       length="2"
                       name="TIPO DOCUMENTO" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[DOCUMENTO IDENTIDAD]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      name="DOCUMENTO IDENTIDAD" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[1ER NOMBRE]"
                       codePage="1252"
@@ -978,7 +950,9 @@ AND CARGOSFU.FunAL&lt;100</property>
                       name="1ER APELLIDO" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[FECHA NACIMIENTO]"
-                      dataType="dbTimeStamp"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
                       name="FECHA NACIMIENTO" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[CORREO ELECTRONICO INSTITUCION]"
@@ -987,19 +961,17 @@ AND CARGOSFU.FunAL&lt;100</property>
                       length="200"
                       name="CORREO ELECTRONICO INSTITUCION" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[DESC CENTRO COSTO (CAR)]"
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[documento identidad]"
                       codePage="1252"
                       dataType="str"
-                      length="20"
-                      name="DESC CENTRO COSTO (CAR)" />
+                      length="15"
+                      name="documento identidad" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[FUNID]"
-                      dataType="i4"
-                      name="FUNID" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[Nº FUNCIONARIO]"
-                      dataType="i4"
-                      name="Nº FUNCIONARIO" />
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de origen de OLE DB].ExternalColumns[Cargo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Cargo" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1015,12 +987,12 @@ AND CARGOSFU.FunAL&lt;100</property>
                       lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[TIPO DOCUMENTO]"
                       name="TIPO DOCUMENTO" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[DOCUMENTO IDENTIDAD]"
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[documento identidad]"
                       codePage="1252"
                       dataType="str"
                       length="15"
-                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[DOCUMENTO IDENTIDAD]"
-                      name="DOCUMENTO IDENTIDAD" />
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[documento identidad]"
+                      name="documento identidad" />
                     <outputColumn
                       refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[1ER NOMBRE]"
                       codePage="1252"
@@ -1044,7 +1016,9 @@ AND CARGOSFU.FunAL&lt;100</property>
                       name="1ER APELLIDO" />
                     <outputColumn
                       refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[FECHA NACIMIENTO]"
-                      dataType="dbTimeStamp"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
                       lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[FECHA NACIMIENTO]"
                       name="FECHA NACIMIENTO" />
                     <outputColumn
@@ -1055,22 +1029,12 @@ AND CARGOSFU.FunAL&lt;100</property>
                       lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[CORREO ELECTRONICO INSTITUCION]"
                       name="CORREO ELECTRONICO INSTITUCION" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[DESC CENTRO COSTO (CAR)]"
+                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[Cargo]"
                       codePage="1252"
                       dataType="str"
-                      length="20"
-                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[DESC CENTRO COSTO (CAR)]"
-                      name="DESC CENTRO COSTO (CAR)" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[FUNID]"
-                      dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[FUNID]"
-                      name="FUNID" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[Nº FUNCIONARIO]"
-                      dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[Nº FUNCIONARIO]"
-                      name="Nº FUNCIONARIO" />
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[Cargo]"
+                      name="Cargo" />
                     <outputColumn
                       refId="Package\Tarea Flujo de datos\Funcionarios SAICO.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -1122,14 +1086,35 @@ AND CARGOSFU.FunAL&lt;100</property>
           Language="CSharp"
           ReadOnlyVariables="User::MailUserName,User::MailUserPsw,User::SendMailBody,User::SendMailFrom,User::SendMailSubject,User::SendMailTo,User::SMTPPort,User::SmtpServer">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_06cc5f464b7d4db687a92484645d096e")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_06cc5f464b7d4db687a92484645d096e")]
+[assembly: AssemblyCopyright("Copyright @  2022")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1540,35 +1525,14 @@ namespace ST_06cc5f464b7d4db687a92484645d096e.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_06cc5f464b7d4db687a92484645d096e")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_06cc5f464b7d4db687a92484645d096e")]
-[assembly: AssemblyCopyright("Copyright @  2022")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -1854,43 +1818,43 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,42"
-          Id="Package\Tarea Flujo de datos\Crea archivo csv"
-          TopLeft="21.5,205.5" />
-        <NodeLayout
           Size="172,42"
           Id="Package\Tarea Flujo de datos\Funcionarios SAICO"
           TopLeft="5.5,5.5" />
         <NodeLayout
+          Size="156,42"
+          Id="Package\Tarea Flujo de datos\Crea archivo csv"
+          TopLeft="21.5,205.5" />
+        <NodeLayout
           Size="175,42"
           Id="Package\Tarea Flujo de datos\Conversión de datos"
-          TopLeft="95.5,95.5" />
+          TopLeft="20.5,101.5" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
           TopLeft="91.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="91.5,48"
+              EndConnector="16.5,54"
               Start="0,0"
-              End="91.5,40.5">
+              End="16.5,46.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20" />
+                    End="0,23" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20"
-                    Point2="0,24"
-                    Point3="4,24" />
+                    Point1="0,23"
+                    Point2="0,27"
+                    Point3="4,27" />
                   <mssgle:LineSegment
-                    End="87.5,24" />
+                    End="12.5,27" />
                   <mssgle:CubicBezierSegment
-                    Point1="87.5,24"
-                    Point2="91.5,24"
-                    Point3="91.5,28" />
+                    Point1="12.5,27"
+                    Point2="16.5,27"
+                    Point3="16.5,31" />
                   <mssgle:LineSegment
-                    End="91.5,40.5" />
+                    End="16.5,46.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1901,30 +1865,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
-          TopLeft="183,137.5">
+          TopLeft="108,143.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-83.5,68"
+              EndConnector="-8.5,62"
               Start="0,0"
-              End="-83.5,60.5">
+              End="-8.5,54.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30" />
+                    End="0,27" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,30"
-                    Point2="0,34"
-                    Point3="-4,34" />
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="-4,31" />
                   <mssgle:LineSegment
-                    End="-79.5,34" />
+                    End="-4.5,31" />
                   <mssgle:CubicBezierSegment
-                    Point1="-79.5,34"
-                    Point2="-83.5,34"
-                    Point3="-83.5,38" />
+                    Point1="-4.5,31"
+                    Point2="-8.5,31"
+                    Point3="-8.5,35" />
                   <mssgle:LineSegment
-                    End="-83.5,60.5" />
+                    End="-8.5,54.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
