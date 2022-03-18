@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">PROD-UCUDBS10</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="UXbgW8pu6g==" SSIS:IV="5z2cR6k639g=">J8/KlFyeUiZI+2ObRGSxkSghPvgCUjcohdq9KUPyrRtulZfD/gENY9M5LK620XNKxpff72K+n4R+Az7IvHOhane3YtcZd3IuDNJ5WaHZJayetNHbEmANNcEGiC6b1TxjbRoC2jrW2x3kBeckqcOliR6GJ2V+UsQ9oBFGINRXLaAZeliwZlNWoA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="CqHlZ3KrsQ==" SSIS:IV="BmqOI92jTT4=">/vV9V7L+9f4KciV5k5SZU8NBrJ+dFySDdTq1PhZwTsCbTfEKKqHQKE5GL3iE6mx8S7MxduRBH/ITmIE1tRshvC033xGQaymzD7On0LjCSvkEL8wOFsR6lCDDeMOnzLLQWbIFuaG6x4tNr7/YBEHCgJQ1jOpIQfwgTYKWwxCZqOSbYYbq0uOeRg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">67</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">71</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{A66630D3-AFAA-4188-A60B-B20B20E461F7}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{ADACABA8-D4C7-409C-B6D2-033A6BFA9D00}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
