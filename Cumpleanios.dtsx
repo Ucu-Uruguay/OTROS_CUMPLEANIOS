@@ -12,8 +12,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="80"
-  DTS:VersionGUID="{AC85B900-BB3D-4A1A-8CD4-9AAFCE55B675}">
+  DTS:VersionBuild="85"
+  DTS:VersionGUID="{E2342691-D19D-4979-9A4E-98A852EB0269}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,12 +27,12 @@
           DTS:ConnectionString="Data Source=10.245.0.30;User ID=Saico_DW;Initial Catalog=UCU;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="mbJrp/lkFO0="
-            IV="6MFuKoJYdVao7hzkcF7Q+A==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="B2u4+67cOw=="
+            IV="dHJSe0XaPw4=" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
-              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+              Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc" />
             <CipherData>
-              <CipherValue>6MFuKoJYdVao7hzkcF7Q+J24sB4lQ2lBzk9vku0brqYc70yefaaBi+FObJ2MnvXkkpmIxJfQs3AeWpj7kugxVbGNUHa9EjWFpgGTdTcgO0on2YtyI6lCGrxZRKqMAAZqknMJ23MQ894xNxu7eanfpZnZRGnmkAsfdk9OCn1piseY1YGUvY21ce79luidl0/e</CipherValue>
+              <CipherValue>dHJSe0XaPw56Q7xEcAJ6I65bjIwXyFCEiGRRgcE7PjSmaUbCcH4qDu5Wpk/Xtv2GhUrOScqN7yTuYtJ5fG0EF1B9bfzYJKfmvsVaG5Tx1rpP02SLHEzP4Y2AZ5H+/x27a4LmxBS3xt0/SNdn/5aUMEYTcOnElKzKOVjuiJH5wJE=</CipherValue>
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -71,6 +71,7 @@
           DTS:Format="Delimited"
           DTS:LocaleID="3082"
           DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
@@ -82,8 +83,8 @@
               DTS:MaximumWidth="2"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Copia de TIPO DOCUMENTO"
-              DTS:DTSID="{ECD79412-31B7-42DF-ABD4-26F6023769C5}"
+              DTS:ObjectName="TIPO_DOCUMENTO"
+              DTS:DTSID="{5B2FA117-1E58-4EA8-A020-4CA82C43BD48}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -91,8 +92,8 @@
               DTS:MaximumWidth="15"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Copia de documento identidad"
-              DTS:DTSID="{7B6BA542-7437-4986-AF8F-16E36167A48D}"
+              DTS:ObjectName="NRO_DOCUMENTO"
+              DTS:DTSID="{1A0D8023-7EDA-4BF5-A8CF-DC15B94B99AC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -100,8 +101,8 @@
               DTS:MaximumWidth="30"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Copia de 1ER NOMBRE"
-              DTS:DTSID="{3646FC7C-E9E7-4ED2-8322-18AC84396C68}"
+              DTS:ObjectName="1ER_NOMBRE"
+              DTS:DTSID="{27394913-B799-4E73-8C60-729A8C9BC7A9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -109,8 +110,8 @@
               DTS:MaximumWidth="30"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Copia de 2DO NOMBRE"
-              DTS:DTSID="{399B1962-447D-4FAE-9BB8-BA1C8721AD7A}"
+              DTS:ObjectName="2DO_NOMBRE"
+              DTS:DTSID="{3DB040CD-8E37-4786-960A-60BB8D499FBF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -118,8 +119,8 @@
               DTS:MaximumWidth="30"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Copia de 1ER APELLIDO"
-              DTS:DTSID="{8A839887-01E1-40D1-BA7C-1C13E93429B1}"
+              DTS:ObjectName="1ER_APELLIDO"
+              DTS:DTSID="{A2177769-10C1-4079-8F85-7B2F2C1BEC4F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -127,8 +128,8 @@
               DTS:MaximumWidth="10"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Copia de FECHA NACIMIENTO"
-              DTS:DTSID="{EF3A927D-26DC-4A67-9B1C-4D43402233E9}"
+              DTS:ObjectName="FECHA_NACIMIENTO"
+              DTS:DTSID="{3512CD32-09D1-41DF-A13E-9381FD5634A5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -136,8 +137,8 @@
               DTS:MaximumWidth="200"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Copia de CORREO ELECTRONICO INSTITUCION"
-              DTS:DTSID="{8AB7ECFD-2E82-4534-88D7-23529452B7F2}"
+              DTS:ObjectName="CORREO_ELECTRONICO_INSTITUCION"
+              DTS:DTSID="{B2F7A264-69B9-4369-85F8-01853E6D7282}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -145,8 +146,8 @@
               DTS:MaximumWidth="100"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Copia de Cargo"
-              DTS:DTSID="{BA728074-4556-4DA3-90D0-2F5F98F9C086}"
+              DTS:ObjectName="CARGO"
+              DTS:DTSID="{FFB05D7D-DD26-466D-9755-1E6C933542BF}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -247,7 +248,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="SendMailTo">
       <DTS:VariableValue
-        DTS:DataType="8">ana.romero@ucu.edu.uy</DTS:VariableValue>
+        DTS:DataType="8">rcalvo@narthex.com.uy</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -394,13 +395,13 @@
                   synchronousInputId="Package\Generar archivo cumpleaños\Conversión de datos.Inputs[Entrada de conversión de datos]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de TIPO DOCUMENTO]"
+                      refId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[TIPO_DOCUMENTO]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
                       length="2"
-                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de TIPO DOCUMENTO]"
-                      name="Copia de TIPO DOCUMENTO"
+                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[TIPO_DOCUMENTO]"
+                      name="TIPO_DOCUMENTO"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -415,13 +416,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de documento identidad]"
+                      refId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[NRO_DOCUMENTO]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
                       length="15"
-                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de documento identidad]"
-                      name="Copia de documento identidad"
+                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[NRO_DOCUMENTO]"
+                      name="NRO_DOCUMENTO"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -436,13 +437,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de 1ER NOMBRE]"
+                      refId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[1ER_NOMBRE]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
                       length="30"
-                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de 1ER NOMBRE]"
-                      name="Copia de 1ER NOMBRE"
+                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[1ER_NOMBRE]"
+                      name="1ER_NOMBRE"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -457,13 +458,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de 2DO NOMBRE]"
+                      refId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[2DO_NOMBRE]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
                       length="30"
-                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de 2DO NOMBRE]"
-                      name="Copia de 2DO NOMBRE"
+                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[2DO_NOMBRE]"
+                      name="2DO_NOMBRE"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -478,13 +479,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de 1ER APELLIDO]"
+                      refId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[1ER_APELLIDO]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
                       length="30"
-                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de 1ER APELLIDO]"
-                      name="Copia de 1ER APELLIDO"
+                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[1ER_APELLIDO]"
+                      name="1ER_APELLIDO"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -499,13 +500,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de FECHA NACIMIENTO]"
+                      refId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[FECHA_NACIMIENTO]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
                       length="10"
-                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de FECHA NACIMIENTO]"
-                      name="Copia de FECHA NACIMIENTO"
+                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[FECHA_NACIMIENTO]"
+                      name="FECHA_NACIMIENTO"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -520,13 +521,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de CORREO ELECTRONICO INSTITUCION]"
+                      refId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[CORREO_ELECTRONICO_INSTITUCION]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
                       length="200"
-                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de CORREO ELECTRONICO INSTITUCION]"
-                      name="Copia de CORREO ELECTRONICO INSTITUCION"
+                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[CORREO_ELECTRONICO_INSTITUCION]"
+                      name="CORREO_ELECTRONICO_INSTITUCION"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -541,13 +542,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de Cargo]"
+                      refId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[CARGO]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
                       length="100"
-                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de Cargo]"
-                      name="Copia de Cargo"
+                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[CARGO]"
+                      name="CARGO"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -594,8 +595,7 @@
               contactInfo="Destino de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
               description="Destino de archivo plano"
               localeId="3082"
-              name="Crea archivo csv"
-              version="1">
+              name="Crea archivo csv">
               <properties>
                 <property
                   dataType="System.Boolean"
@@ -625,104 +625,104 @@
                   name="Entrada de destino de archivo plano">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[Copia de TIPO DOCUMENTO]"
+                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[TIPO_DOCUMENTO]"
                       cachedDataType="wstr"
                       cachedLength="2"
-                      cachedName="Copia de TIPO DOCUMENTO"
-                      externalMetadataColumnId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Copia de TIPO DOCUMENTO]"
-                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de TIPO DOCUMENTO]" />
+                      cachedName="TIPO_DOCUMENTO"
+                      externalMetadataColumnId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[TIPO_DOCUMENTO]"
+                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[TIPO_DOCUMENTO]" />
                     <inputColumn
-                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[Copia de documento identidad]"
+                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[NRO_DOCUMENTO]"
                       cachedDataType="wstr"
                       cachedLength="15"
-                      cachedName="Copia de documento identidad"
-                      externalMetadataColumnId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Copia de documento identidad]"
-                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de documento identidad]" />
+                      cachedName="NRO_DOCUMENTO"
+                      externalMetadataColumnId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[NRO_DOCUMENTO]"
+                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[NRO_DOCUMENTO]" />
                     <inputColumn
-                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[Copia de FECHA NACIMIENTO]"
+                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[1ER_NOMBRE]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="1ER_NOMBRE"
+                      externalMetadataColumnId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[1ER_NOMBRE]"
+                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[1ER_NOMBRE]" />
+                    <inputColumn
+                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[2DO_NOMBRE]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="2DO_NOMBRE"
+                      externalMetadataColumnId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[2DO_NOMBRE]"
+                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[2DO_NOMBRE]" />
+                    <inputColumn
+                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[1ER_APELLIDO]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="1ER_APELLIDO"
+                      externalMetadataColumnId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[1ER_APELLIDO]"
+                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[1ER_APELLIDO]" />
+                    <inputColumn
+                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[FECHA_NACIMIENTO]"
                       cachedDataType="wstr"
                       cachedLength="10"
-                      cachedName="Copia de FECHA NACIMIENTO"
-                      externalMetadataColumnId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Copia de FECHA NACIMIENTO]"
-                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de FECHA NACIMIENTO]" />
+                      cachedName="FECHA_NACIMIENTO"
+                      externalMetadataColumnId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[FECHA_NACIMIENTO]"
+                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[FECHA_NACIMIENTO]" />
                     <inputColumn
-                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[Copia de 1ER NOMBRE]"
-                      cachedDataType="wstr"
-                      cachedLength="30"
-                      cachedName="Copia de 1ER NOMBRE"
-                      externalMetadataColumnId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Copia de 1ER NOMBRE]"
-                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de 1ER NOMBRE]" />
-                    <inputColumn
-                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[Copia de 2DO NOMBRE]"
-                      cachedDataType="wstr"
-                      cachedLength="30"
-                      cachedName="Copia de 2DO NOMBRE"
-                      externalMetadataColumnId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Copia de 2DO NOMBRE]"
-                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de 2DO NOMBRE]" />
-                    <inputColumn
-                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[Copia de 1ER APELLIDO]"
-                      cachedDataType="wstr"
-                      cachedLength="30"
-                      cachedName="Copia de 1ER APELLIDO"
-                      externalMetadataColumnId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Copia de 1ER APELLIDO]"
-                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de 1ER APELLIDO]" />
-                    <inputColumn
-                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[Copia de CORREO ELECTRONICO INSTITUCION]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="Copia de CORREO ELECTRONICO INSTITUCION"
-                      externalMetadataColumnId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Copia de CORREO ELECTRONICO INSTITUCION]"
-                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de CORREO ELECTRONICO INSTITUCION]" />
-                    <inputColumn
-                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[Copia de Cargo]"
+                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[CARGO]"
                       cachedDataType="wstr"
                       cachedLength="100"
-                      cachedName="Copia de Cargo"
-                      externalMetadataColumnId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Copia de Cargo]"
-                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de Cargo]" />
+                      cachedName="CARGO"
+                      externalMetadataColumnId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[CARGO]"
+                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[CARGO]" />
+                    <inputColumn
+                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].Columns[CORREO_ELECTRONICO_INSTITUCION]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="CORREO_ELECTRONICO_INSTITUCION"
+                      externalMetadataColumnId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[CORREO_ELECTRONICO_INSTITUCION]"
+                      lineageId="Package\Generar archivo cumpleaños\Conversión de datos.Outputs[Salida de conversión de datos].Columns[CORREO_ELECTRONICO_INSTITUCION]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Copia de TIPO DOCUMENTO]"
+                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[TIPO_DOCUMENTO]"
                       dataType="wstr"
                       length="2"
-                      name="Copia de TIPO DOCUMENTO" />
+                      name="TIPO_DOCUMENTO" />
                     <externalMetadataColumn
-                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Copia de documento identidad]"
+                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[NRO_DOCUMENTO]"
                       dataType="wstr"
                       length="15"
-                      name="Copia de documento identidad" />
+                      name="NRO_DOCUMENTO" />
                     <externalMetadataColumn
-                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Copia de FECHA NACIMIENTO]"
+                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[1ER_NOMBRE]"
+                      dataType="wstr"
+                      length="30"
+                      name="1ER_NOMBRE" />
+                    <externalMetadataColumn
+                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[2DO_NOMBRE]"
+                      dataType="wstr"
+                      length="30"
+                      name="2DO_NOMBRE" />
+                    <externalMetadataColumn
+                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[1ER_APELLIDO]"
+                      dataType="wstr"
+                      length="30"
+                      name="1ER_APELLIDO" />
+                    <externalMetadataColumn
+                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[FECHA_NACIMIENTO]"
                       dataType="wstr"
                       length="10"
-                      name="Copia de FECHA NACIMIENTO" />
+                      name="FECHA_NACIMIENTO" />
                     <externalMetadataColumn
-                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Copia de 1ER NOMBRE]"
-                      dataType="wstr"
-                      length="30"
-                      name="Copia de 1ER NOMBRE" />
-                    <externalMetadataColumn
-                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Copia de 2DO NOMBRE]"
-                      dataType="wstr"
-                      length="30"
-                      name="Copia de 2DO NOMBRE" />
-                    <externalMetadataColumn
-                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Copia de 1ER APELLIDO]"
-                      dataType="wstr"
-                      length="30"
-                      name="Copia de 1ER APELLIDO" />
-                    <externalMetadataColumn
-                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Copia de CORREO ELECTRONICO INSTITUCION]"
-                      dataType="wstr"
-                      length="200"
-                      name="Copia de CORREO ELECTRONICO INSTITUCION" />
-                    <externalMetadataColumn
-                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[Copia de Cargo]"
+                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[CARGO]"
                       dataType="wstr"
                       length="100"
-                      name="Copia de Cargo" />
+                      name="CARGO" />
+                    <externalMetadataColumn
+                      refId="Package\Generar archivo cumpleaños\Crea archivo csv.Inputs[Entrada de destino de archivo plano].ExternalColumns[CORREO_ELECTRONICO_INSTITUCION]"
+                      dataType="wstr"
+                      length="200"
+                      name="CORREO_ELECTRONICO_INSTITUCION" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -752,7 +752,7 @@
                   dataType="System.String"
                   description="Comando SQL para ejecutar."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select TRIM([TIPO DOCUMENTO]) [TIPO DOCUMENTO], TRIM([documento identidad]) [documento identidad], TRIM(upper([1ER NOMBRE])) [1ER NOMBRE] , TRIM(upper([2DO NOMBRE])) [2DO NOMBRE] , 
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select TRIM([TIPO DOCUMENTO]) [TIPO DOCUMENTO], TRIM([documento identidad]) [documento identidad], TRIM(upper([1ER NOMBRE])) [1ER NOMBRE] , TRIM(upper([2DO NOMBRE])) [2DO NOMBRE] , 
 
 TRIM(upper([1ER APELLIDO])) [1ER APELLIDO] , convert(varchar(10), [FECHA NACIMIENTO], 23) as [FECHA NACIMIENTO],
 
@@ -1070,19 +1070,19 @@ order by day([fecha nacimiento])</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Script envìo mail"
+      DTS:refId="Package\Script envio mail"
       DTS:CreationName="Microsoft.ScriptTask"
       DTS:Description="Tarea Script"
-      DTS:DTSID="{A71E79B7-9AC0-4BF7-BADC-38C02C43A942}"
+      DTS:DTSID="{90F6C35F-9217-4E2D-A87C-1F5DB13FF60B}"
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Script envìo mail"
+      DTS:ObjectName="Script envio mail"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <ScriptProject
-          Name="ST_06cc5f464b7d4db687a92484645d096e"
-          VSTAMajorVersion="15"
+          Name="ST_8fbcba6c41474f14a038e214c3562d0f"
+          VSTAMajorVersion="14"
           VSTAMinorVersion="0"
           Language="CSharp"
           ReadOnlyVariables="User::MailUserName,User::MailUserPsw,User::SendMailBody,User::SendMailFrom,User::SendMailSubject,User::SendMailTo,User::SMTPPort,User::SmtpServer">
@@ -1216,10 +1216,10 @@ order by day([fecha nacimiento])</property>
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_06cc5f464b7d4db687a92484645d096e.Properties.Settings.get_Default():ST_06cc5f464b7d4db687a92484645d096e.Properties.Sett" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_8fbcba6c41474f14a038e214c3562d0f.Properties.Settings.get_Default():ST_8fbcba6c41474f14a038e214c3562d0f.Properties.Sett" +
     "ings")]
 
-namespace ST_06cc5f464b7d4db687a92484645d096e.Properties {
+namespace ST_8fbcba6c41474f14a038e214c3562d0f.Properties {
     
     
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
@@ -1235,92 +1235,6 @@ namespace ST_06cc5f464b7d4db687a92484645d096e.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="ST_06cc5f464b7d4db687a92484645d096e.csproj"
-            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7A33C013-5F94-4613-9E96-471B46AD6886}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ST_06cc5f464b7d4db687a92484645d096e</RootNamespace>
-    <AssemblyName>ST_06cc5f464b7d4db687a92484645d096e</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
-    <TargetFrameworkProfile></TargetFrameworkProfile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>.\bin\Debug\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DebugSymbols>false</DebugSymbols>
-    <Optimize>true</Optimize>
-    <OutputPath>.\bin\Release\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
-  </ItemGroup>
-  <ItemGroup>
-    <AppDesigner Include="Properties\" />
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="ScriptMain.cs">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <!-- Include the build rules for a C# project.-->
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ProjectExtensions>
-    <VisualStudio>
-      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
-        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
-        <Host Name="ScriptTask" />
-        <ProjectClient>
-          <HostIdentifier>SSIS_ST150</HostIdentifier>
-        </ProjectClient>
-      </FlavorProperties>
-    </VisualStudio>
-  </ProjectExtensions>
-</Project>]]></ProjectItem>
-          <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
 /* The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -1333,15 +1247,12 @@ namespace ST_06cc5f464b7d4db687a92484645d096e.Properties {
 
 #region Namespaces
 using System;
-using System.Data;
-using Microsoft.SqlServer.Dts.Runtime;
-using System.Windows.Forms;
+using System.Diagnostics;
 using System.Net;
 using System.Net.Mail;
-using System.Diagnostics;
 #endregion
 
-namespace ST_06cc5f464b7d4db687a92484645d096e
+namespace ST_8fbcba6c41474f14a038e214c3562d0f
 {
     /// <summary>
     /// ScriptMain is the entry point class of the script.  Do not change the name, attributes,
@@ -1425,7 +1336,6 @@ namespace ST_06cc5f464b7d4db687a92484645d096e
             String SendMailBody = Dts.Variables["SendMailBody"].Value.ToString();
             String MailUserName = Dts.Variables["MailUserName"].Value.ToString();
             String MailUserPsw = Dts.Variables["MailUserPsw"].Value.ToString();
-
             // Get SMTP Server from SMTP Connection Manager. Alternative is to use extra variables or paramters instead:
             String SmtpServer = Dts.Variables["SmtpServer"].Value.ToString();
             // String SmtpServer = Dts.Connections["Administrador de conexiones SMTP"].Properties["SmtpServer"].GetValue(Dts.Connections["Administrador de conexiones SMTP"]).ToString();
@@ -1466,7 +1376,12 @@ namespace ST_06cc5f464b7d4db687a92484645d096e
         }
 
         #region ScriptResults declaration
-
+        /// <summary>
+        /// This enum provides a convenient shorthand within the scope of this class for setting the
+        /// result of the script.
+        /// 
+        /// This code was generated automatically.
+        /// </summary>
         enum ScriptResults
         {
             Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success,
@@ -1479,34 +1394,22 @@ namespace ST_06cc5f464b7d4db687a92484645d096e
           <ProjectItem
             Name="Project"
             Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
-  <msb:PropertyGroup>
-    <msb:CodeName>ST_06cc5f464b7d4db687a92484645d096e</msb:CodeName>
-    <msb:Language>msBuild</msb:Language>
-    <msb:DisplayName>ST_06cc5f464b7d4db687a92484645d096e</msb:DisplayName>
-    <msb:ProjectId>{E5338E0C-0670-4919-8304-6C74E02D8EA9}</msb:ProjectId>
-  </msb:PropertyGroup>
-  <msb:ItemGroup>
-    <msb:Project Include="ST_06cc5f464b7d4db687a92484645d096e.csproj" />
-    <msb:File Include="Properties\Settings.settings" />
-    <msb:File Include="Properties\AssemblyInfo.cs" />
-    <msb:File Include="Properties\Resources.resx" />
-    <msb:File Include="Properties\Resources.Designer.cs" />
-    <msb:File Include="Properties\Settings.Designer.cs" />
-    <msb:File Include="ScriptMain.cs" />
-    <msb:Breakpoint Include="123e3701d9be4866a309a1bf7847e2e5">
-      <msb:FileName>ScriptMain.cs</msb:FileName>
-      <msb:LineNumber>133</msb:LineNumber>
-      <msb:ColumnNumber>21</msb:ColumnNumber>
-      <msb:Enabled>True</msb:Enabled>
-      <msb:ConditionType>1</msb:ConditionType>
-      <msb:Condition>
-      </msb:Condition>
-      <msb:Language>C#</msb:Language>
-      <msb:HitCountType>1</msb:HitCountType>
-      <msb:HitCountTarget>1</msb:HitCountTarget>
-    </msb:Breakpoint>
-  </msb:ItemGroup>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>ST_8fbcba6c41474f14a038e214c3562d0f</msb:CodeName>
+		<msb:DisplayName>ST_8fbcba6c41474f14a038e214c3562d0f</msb:DisplayName>
+		<msb:ProjectId>{B2FC5683-43A2-478B-A72A-B1DDBEA1345C}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="ST_8fbcba6c41474f14a038e214c3562d0f.csproj"/>
+		<msb:File Include="Properties\Settings.settings"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Resources.resx"/>
+		<msb:File Include="Properties\Resources.Designer.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="ScriptMain.cs"/>
+	</msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
             Name="Properties\AssemblyInfo.cs"
@@ -1518,11 +1421,11 @@ using System.Runtime.CompilerServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("ST_06cc5f464b7d4db687a92484645d096e")]
+[assembly: AssemblyTitle("ST_8fbcba6c41474f14a038e214c3562d0f")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_06cc5f464b7d4db687a92484645d096e")]
+[assembly: AssemblyProduct("ST_8fbcba6c41474f14a038e214c3562d0f")]
 [assembly: AssemblyCopyright("Copyright @  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -1538,6 +1441,91 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+          <ProjectItem
+            Name="ST_8fbcba6c41474f14a038e214c3562d0f.csproj"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{798A7143-4C4E-4F66-88F6-CD61F727E8E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ST_8fbcba6c41474f14a038e214c3562d0f</RootNamespace>
+    <AssemblyName>ST_8fbcba6c41474f14a038e214c3562d0f</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptMain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptTask" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_ST130</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Settings.settings"
             Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
@@ -1558,14 +1546,14 @@ using System.Runtime.CompilerServices;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_06cc5f464b7d4db687a92484645d096e.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_8fbcba6c41474f14a038e214c3562d0f.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
     "rceManager")]
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_06cc5f464b7d4db687a92484645d096e.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_8fbcba6c41474f14a038e214c3562d0f.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
     "fo")]
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_06cc5f464b7d4db687a92484645d096e.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_8fbcba6c41474f14a038e214c3562d0f.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
     "):Void")]
 
-namespace ST_06cc5f464b7d4db687a92484645d096e.Properties {
+namespace ST_8fbcba6c41474f14a038e214c3562d0f.Properties {
     
     
     /// <summary>
@@ -1593,7 +1581,7 @@ namespace ST_06cc5f464b7d4db687a92484645d096e.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if ((resourceMan == null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ST_06cc5f464b7d4db687a92484645d096e.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ST_8fbcba6c41474f14a038e214c3562d0f.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -1616,9 +1604,9 @@ namespace ST_06cc5f464b7d4db687a92484645d096e.Properties {
     }
 }]]></ProjectItem>
           <BinaryItem
-            Name="ST_06cc5f464b7d4db687a92484645d096e.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+            Name="ST_8fbcba6c41474f14a038e214c3562d0f.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAO13O2IAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAA2jIA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDABh9O2IAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAA2jIA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAIgyAABPAAAAAEAAAHgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1639,53 +1627,53 @@ bykAAApzKgAACoABAAAEfgEAAAQqGn4CAAAEKh4CgAIAAAQqGn4DAAAEKh4CKCsAAAoqLnMIAAAG
 gAMAAAQqAABCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAFAGwAAAB4BAAAI34AAOQEAAD8
 BgAAI1N0cmluZ3MAAAAA4AsAAKABAAAjVVMAgA0AABAAAAAjR1VJRAAAAJANAADEAQAAI0Jsb2IA
 AAAAAAAAAgAAAVcdogkJAwAAAPoBMwAWAAABAAAAKwAAAAUAAAAGAAAACQAAAAEAAAArAAAAAgAA
-ABAAAAABAAAAAgAAAAMAAAAEAAAAAQAAAAEAAAAEAAAAAQAAAAEAAAAAAEMEAQAAAAAABgCyAngF
-BgBBA3gFBgD+AWUFDwDsBQAABgArAvMEBgCVAvMEBgB2AvMEBgAoA/MEBgDSAvMEBgDrAvMEBgBC
-AvMEBgBdAm8DCgAGA7EDCgBsAbEDDgCwADMEDgDGBjMEBgAaBaYEBgCtBKYEBgDhAWUFBgCZBqYE
-BgA0BZgFBgAkBd4EDgCxAR0EDgASAh0EDgCIAckEBgDGAXgFCgALBLEDEgAuBv0AEgC8AP0ABgAO
-AKYEDgAFBTMEDgDRBjMEBgABAOwDDgBEBaAGDgAnAaAGDgBpADMEDgDaA6AGDgDcBqAGBgD1AKYE
-BgDFAKYEBgA3AaYEBgDRAKYEBgDzBvMEAAAAABQAAAAAAAEAAQABABAAvgR8ADkAAQABAAAAEACf
-BfsFUQABAAMAAAEQADgG+wVlAAMABwADAQAAewYAAEkABAAKABEAsgTIABEAXAHMABEAoADQAAYG
-PADUAFaAawbXAFaAPAHXAFAgAAAAAIYAxAQGAAEAFCIAAAAAhhhYBQYAAQAcIgAAAACDGFgFBgAB
-ACQiAAAAAJMIMAXbAAEAUCIAAAAAkwhEAeAAAQBXIgAAAACTCFAB5QABAF8iAAAAAJYIqwbrAAIA
-ZiIAAAAAhhhYBQYAAgBuIgAAAACRGF4F8AACAAAAAQBpAwkAWAUBABEAWAUGABkAWAUKACkAWAUQ
+ABAAAAABAAAAAgAAAAMAAAAEAAAAAQAAAAEAAAAEAAAAAQAAAAEAAAAAAEMEAQAAAAAABgCOAngF
+BgAdA3gFBgDaAWUFDwDsBQAABgAHAvMEBgBxAvMEBgBSAvMEBgAEA/MEBgCuAvMEBgDHAvMEBgAe
+AvMEBgA5Am8DCgDiArEDCgBIAbEDDgCMADMEDgDGBjMEBgAaBaYEBgCtBKYEBgC9AWUFBgCZBqYE
+BgA0BZgFBgAkBd4EDgCNAR0EDgDuAR0EDgBkAckEBgCiAXgFCgALBLEDEgAuBtkAEgCYANkABgAO
+AKYEDgAFBTMEDgDRBjMEBgABAOwDDgBEBaAGDgADAaAGDgBpADMEDgDaA6AGDgDcBqAGBgDRAKYE
+BgChAKYEBgATAaYEBgCtAKYEBgDzBvMEAAAAABQAAAAAAAEAAQABABAAvgRLAzkAAQABAAAAEACf
+BfsFUQABAAMAAAEQADgG+wVlAAMABwADAQAAewYAAEkABAAKABEAsgTIABEAOAHMABEAfADQAAYG
+PADUAFaAawbXAFaAGAHXAFAgAAAAAIYAxAQGAAEAFCIAAAAAhhhYBQYAAQAcIgAAAACDGFgFBgAB
+ACQiAAAAAJMIMAXbAAEAUCIAAAAAkwggAeAAAQBXIgAAAACTCCwB5QABAF8iAAAAAJYIqwbrAAIA
+ZiIAAAAAhhhYBQYAAgBuIgAAAACRGF4F8AACAAAAAQBFAwkAWAUBABEAWAUGABkAWAUKACkAWAUQ
 ADEAWAUQADkAWAUQAEEAWAUQAEkAWAUQAFEAWAUQAFkAWAUQAGEAWAUQAGkAWAUGAJkAWAUGAMEA
-WAUVANEAWAUGAHEAcwYpANkAKgYuAOEAnQQzAOkAXwM5AKEAiQM9APEAqAFBAHkAWAVIAHkAawRQ
+WAUVANEAWAUGAHEAcwYpANkAKgYuAOEAnQQzAOkAOwM5AKEAiQM9APEAhAFBAHkAWAVIAHkAawRQ
 AHkAiQZVAAEBWAUQAAwATQBjABEBegRpAIEAWAVwAIEAUQZQAIEAVgB2AIEAjwRQACkBWAV9AIEA
-QQaDAIEAUQCKADkBHQGQAEEBoAEGANkAtwYBAHEAWAUGAKEAWAUGAEkB4wCVAEkB7waeAKkAWAWk
+QQaDAIEAUQCKADkB+QCQAEEBfAEGANkAtwYBAHEAWAUGAKEAWAUGAEkBvwCVAEkB7waeAKkAWAWk
 AMkAWAUGAAgAFAC+AAgAGADDACkAcwArAS4ACwADAS4AEwAMAS4AGwArAS4AIwA0AS4AKwBdAS4A
 MwBdAS4AOwBdAS4AQwA0AS4ASwBjAS4AUwBdAS4AWwB6AUMAYwDDAEkAcwArAWEAewDDAGMAawDD
-ABsAAwABAAQAAwAAADQF9AAAAGQB+QAAAK8G/gACAAQAAwACAAUABQABAAYABQACAAcABwBaAASA
-AAABAAAAtR9edQAAAAAAAHwAAAAEAAAAAAAAAAAAAACsAEQAAAAAAA8AAAAAAAAAAAAAALUAkgMA
-AAAABAAAAAAAAAAAAAAArACmBAAAAAAPAAAAAAAAAAAAAAC1AB0AAAAAAAAAAAABAAAAqQUAAAUA
+ABsAAwABAAQAAwAAADQF9AAAAEAB+QAAAK8G/gACAAQAAwACAAUABQABAAYABQACAAcABwBaAASA
+AAABAAAAtR/0dwAAAAAAAEsDAAAEAAAAAAAAAAAAAACsAEQAAAAAAA0AAAAAAAAAAAAAALUAkgMA
+AAAABAAAAAAAAAAAAAAArACmBAAAAAANAAAAAAAAAAAAAAC1AB0AAAAAAAAAAAABAAAAqQUAAAUA
 AgAAAAAAAENvbGxlY3Rpb25gMQBJbnQzMgA8TW9kdWxlPgBNaWNyb3NvZnQuU3FsU2VydmVyLk1h
 bmFnZWREVFMAdmFsdWVfXwBtc2NvcmxpYgBBZGQAU2VuZABzZXRfRGVsaXZlcnlNZXRob2QAU210
-cERlbGl2ZXJ5TWV0aG9kAFNUXzA2Y2M1ZjQ2NGI3ZDRkYjY4N2E5MjQ4NDY0NWQwOTZlAGRlZmF1
-bHRJbnN0YW5jZQBNYWlsTWVzc2FnZQBWYXJpYWJsZQBJRGlzcG9zYWJsZQBSdW50aW1lVHlwZUhh
-bmRsZQBHZXRUeXBlRnJvbUhhbmRsZQBDb25zb2xlAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlJ1
-bnRpbWUAV3JpdGVMaW5lAFNlY3VyaXR5UHJvdG9jb2xUeXBlAEZhaWx1cmUAZ2V0X0N1bHR1cmUA
-c2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAFZTVEFSVFNjcmlwdE9iamVjdE1vZGVsQmFzZQBB
-cHBsaWNhdGlvblNldHRpbmdzQmFzZQBEaXNwb3NlAFRyeVBhcnNlAEVkaXRvckJyb3dzYWJsZVN0
-YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1
-dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlU
-aXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtB
-dHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRp
-b25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1
-Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAU1NJU1NjcmlwdFRhc2tFbnRy
-eVBvaW50QXR0cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJp
-bGl0eUF0dHJpYnV0ZQBnZXRfVmFsdWUAdmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBU
+cERlbGl2ZXJ5TWV0aG9kAGRlZmF1bHRJbnN0YW5jZQBNYWlsTWVzc2FnZQBWYXJpYWJsZQBJRGlz
+cG9zYWJsZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRsZQBDb25zb2xlAE1pY3Jv
+c29mdC5TcWxTZXJ2ZXIuRHRzLlJ1bnRpbWUAV3JpdGVMaW5lAFNlY3VyaXR5UHJvdG9jb2xUeXBl
+AEZhaWx1cmUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAFZTVEFSVFNj
+cmlwdE9iamVjdE1vZGVsQmFzZQBBcHBsaWNhdGlvblNldHRpbmdzQmFzZQBEaXNwb3NlAFRyeVBh
+cnNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVn
+Z2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2Fi
+bGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJp
+YnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmli
+dXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0
+dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1
+dGUAU1NJU1NjcmlwdFRhc2tFbnRyeVBvaW50QXR0cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJp
+YnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQBnZXRfVmFsdWUAdmFsdWUAU1RfOGZi
+Y2JhNmM0MTQ3NGYxNGEwMzhlMjE0YzM1NjJkMGYAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBU
 b1N0cmluZwBNaWNyb3NvZnQuU3FsU2VydmVyLlNjcmlwdFRhc2sATWljcm9zb2Z0LlNxbFNlcnZl
 ci5EdHMuVGFza3MuU2NyaXB0VGFzawBOZXR3b3JrQ3JlZGVudGlhbABTeXN0ZW0uQ29sbGVjdGlv
 bnMuT2JqZWN0TW9kZWwAU2NyaXB0T2JqZWN0TW9kZWwAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFN5
-c3RlbS5OZXQuTWFpbABTVF8wNmNjNWY0NjRiN2Q0ZGI2ODdhOTI0ODQ2NDVkMDk2ZS5kbGwAc2V0
+c3RlbS5OZXQuTWFpbABTVF84ZmJjYmE2YzQxNDc0ZjE0YTAzOGUyMTRjMzU2MmQwZi5kbGwAc2V0
 X0lzQm9keUh0bWwAc2V0X1NlY3VyaXR5UHJvdG9jb2wAc2V0X0VuYWJsZVNzbABnZXRfSXRlbQBT
 eXN0ZW0ARW51bQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAFN5c3RlbS5Db25maWd1cmF0aW9uAFN5
 c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0aW9uAEF0dGFjaG1lbnRDb2xsZWN0aW9u
 AEV4Y2VwdGlvbgBDdWx0dXJlSW5mbwBnZXRfUmVzb3VyY2VNYW5hZ2VyAFNlcnZpY2VQb2ludE1h
 bmFnZXIALmN0b3IALmNjdG9yAFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21w
-aWxlclNlcnZpY2VzAFN5c3RlbS5SZXNvdXJjZXMAU1RfMDZjYzVmNDY0YjdkNGRiNjg3YTkyNDg0
-NjQ1ZDA5NmUuUHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNU
-XzA2Y2M1ZjQ2NGI3ZDRkYjY4N2E5MjQ4NDY0NWQwOTZlLlByb3BlcnRpZXMAZ2V0X1ZhcmlhYmxl
+aWxlclNlcnZpY2VzAFN5c3RlbS5SZXNvdXJjZXMAU1RfOGZiY2JhNmM0MTQ3NGYxNGEwMzhlMjE0
+YzM1NjJkMGYuUHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNU
+XzhmYmNiYTZjNDE0NzRmMTRhMDM4ZTIxNGMzNTYyZDBmLlByb3BlcnRpZXMAZ2V0X1ZhcmlhYmxl
 cwBTZXR0aW5ncwBzZXRfQ3JlZGVudGlhbHMAc2V0X1VzZURlZmF1bHRDcmVkZW50aWFscwBTdWNj
 ZXNzAGdldF9EdHMAU2NyaXB0UmVzdWx0cwBnZXRfQXR0YWNobWVudHMAT2JqZWN0AFN5c3RlbS5O
 ZXQAZ2V0X0RlZmF1bHQAc2V0X1Rhc2tSZXN1bHQAU210cENsaWVudABBdHRhY2htZW50AElDcmVk
@@ -1694,17 +1682,17 @@ ZQBuAGQATQBhAGkAbABUAG8AAB9TAGUAbgBkAE0AYQBpAGwAUwB1AGIAagBlAGMAdAAAGVMAZQBu
 AGQATQBhAGkAbABCAG8AZAB5AAAZTQBhAGkAbABVAHMAZQByAE4AYQBtAGUAABdNAGEAaQBsAFUA
 cwBlAHIAUABzAHcAABVTAG0AdABwAFMAZQByAHYAZQByAAARUwBNAFQAUABQAG8AcgB0AABnQwA6
 AFwARQBUAEwAIABVAEMAVQBcAFUAQwBVAF8ATwBUAFIATwBTAFwAVQBDAFUAXwBPAFQAUgBPAFMA
-XwBDAFUATQBQAEwARQBTAFwAQwB1AG0AcABsAGUAcwBfAC4AYwBzAHYAAHFTAFQAXwAwADYAYwBj
-ADUAZgA0ADYANABiADcAZAA0AGQAYgA2ADgANwBhADkAMgA0ADgANAA2ADQANQBkADAAOQA2AGUA
-LgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAB73j5S5mAdTrD1gFSW
-VJS+AAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFdDQcJDg4ODg4OCBI9EkEEIAASbQQgABJxBSAB
+XwBDAFUATQBQAEwARQBTAFwAQwB1AG0AcABsAGUAcwBfAC4AYwBzAHYAAHFTAFQAXwA4AGYAYgBj
+AGIAYQA2AGMANAAxADQANwA0AGYAMQA0AGEAMAAzADgAZQAyADEANABjADMANQA2ADIAZAAwAGYA
+LgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAFBhxqSS3xSpXPYMU/
+S0UiAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFdDQcJDg4ODg4OCBI9EkEEIAASbQQgABJxBSAB
 EnUcAyAAHAMgAA4GAAICDhAIByAEAQ4ODg4EIAEBAgQgABJ9CBUSgIUBEoCBBSABARMABgABARGA
 jQUgAgEOCAYgAQERgJEFIAIBDg4GIAEBEoCZBSABARI9BAABAQ4IAAESgKURgKkFIAASgK0HIAIB
 DhKArQi3elxWGTTgiQiJhF3NgIDMkQQAAAAABAEAAAADBhJVAwYSWQMGEhACBggDBhEUBAAAElUE
 AAASWQUAAQESWQQAABIQAwAAAQQIABJVBAgAElkECAASEAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5v
-bkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU1RfMDZjYzVmNDY0YjdkNGRiNjg3YTkyNDg0
-NjQ1ZDA5NmUAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMgAASQEAGi5ORVRGcmFtZXdvcmss
-VmVyc2lvbj12NC43AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0Lje0
+bkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU1RfOGZiY2JhNmM0MTQ3NGYxNGEwMzhlMjE0
+YzM1NjJkMGYAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMgAASQEAGi5ORVRGcmFtZXdvcmss
+VmVyc2lvbj12NC41AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjW0
 AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGli
 LCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVj
 NTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAA
@@ -1717,24 +1705,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
 SAAAAFhAAAAaBAAAAAAAAAAAAAAaBDQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
-AAAAvQTv/gAAAQAAAAEAXnW1HwAAAQBedbUfPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
+AAAAvQTv/gAAAQAAAAEA9He1HwAAAQD0d7UfPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
 AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
 AAAAAAAAALAEegMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAVgMAAAEAMAAwADAA
 MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
 AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
-AABTAFQAXwAwADYAYwBjADUAZgA0ADYANABiADcAZAA0AGQAYgA2ADgANwBhADkAMgA0ADgANAA2
-ADQANQBkADAAOQA2AGUAAAA+AA8AAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
-OAAxADEANwAuADMAMAAwADQANgAAAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABT
-AFQAXwAwADYAYwBjADUAZgA0ADYANABiADcAZAA0AGQAYgA2ADgANwBhADkAMgA0ADgANAA2ADQA
-NQBkADAAOQA2AGUALgBkAGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAA
+AABTAFQAXwA4AGYAYgBjAGIAYQA2AGMANAAxADQANwA0AGYAMQA0AGEAMAAzADgAZQAyADEANABj
+ADMANQA2ADIAZAAwAGYAAAA+AA8AAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
+OAAxADEANwAuADMAMAA3ADAAOAAAAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABT
+AFQAXwA4AGYAYgBjAGIAYQA2AGMANAAxADQANwA0AGYAMQA0AGEAMAAzADgAZQAyADEANABjADMA
+NQA2ADIAZAAwAGYALgBkAGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAA
 AEMAbwBwAHkAcgBpAGcAaAB0ACAAQAAgACAAMgAwADIAMgAAACoAAQABAEwAZQBnAGEAbABUAHIA
 YQBkAGUAbQBhAHIAawBzAAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBh
-AG0AZQAAAFMAVABfADAANgBjAGMANQBmADQANgA0AGIANwBkADQAZABiADYAOAA3AGEAOQAyADQA
-OAA0ADYANAA1AGQAMAA5ADYAZQAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBl
-AAAAAABTAFQAXwAwADYAYwBjADUAZgA0ADYANABiADcAZAA0AGQAYgA2ADgANwBhADkAMgA0ADgA
-NAA2ADQANQBkADAAOQA2AGUAAABCAA8AAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAx
-AC4AMAAuADgAMQAxADcALgAzADAAMAA0ADYAAAAAAEYADwABAEEAcwBzAGUAbQBiAGwAeQAgAFYA
-ZQByAHMAaQBvAG4AAAAxAC4AMAAuADgAMQAxADcALgAzADAAMAA0ADYAAAAAAAAAAAAAAAAAAAAA
+AG0AZQAAAFMAVABfADgAZgBiAGMAYgBhADYAYwA0ADEANAA3ADQAZgAxADQAYQAwADMAOABlADIA
+MQA0AGMAMwA1ADYAMgBkADAAZgAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBl
+AAAAAABTAFQAXwA4AGYAYgBjAGIAYQA2AGMANAAxADQANwA0AGYAMQA0AGEAMAAzADgAZQAyADEA
+NABjADMANQA2ADIAZAAwAGYAAABCAA8AAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAx
+AC4AMAAuADgAMQAxADcALgAzADAANwAwADgAAAAAAEYADwABAEEAcwBzAGUAbQBiAGwAeQAgAFYA
+ZQByAHMAaQBvAG4AAAAxAC4AMAAuADgAMQAxADcALgAzADAANwAwADgAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1751,11 +1739,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
-          <Breakpoint
-            Enabled="True"
-            File="ScriptMain.cs"
-            Line="133"
-            Column="21" />
         </ScriptProject>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1790,11 +1773,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restricción]"
       DTS:CreationName=""
-      DTS:DTSID="{D92E43FE-C49E-40F0-B020-990C1A9E9508}"
+      DTS:DTSID="{B4E5EE7D-BC63-48A6-8118-6D5BD2780BC8}"
       DTS:From="Package\Generar archivo cumpleaños"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción"
-      DTS:To="Package\Script envìo mail" />
+      DTS:To="Package\Script envio mail" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
@@ -1813,27 +1796,39 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Id="Package\Generar archivo cumpleaños"
           TopLeft="37.5,6.5" />
         <NodeLayout
-          Size="157,42"
-          Id="Package\Script envìo mail"
-          TopLeft="65.5,107.5" />
-        <NodeLayout
           Size="171,42"
           Id="Package\Tarea Enviar correo"
           TopLeft="255.5,107.5" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Script envio mail"
+          TopLeft="87.5,128.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="144,48.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59"
+              EndConnector="22,80"
               Start="0,0"
-              End="0,51.5">
+              End="22,72.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.5" />
+                    End="0,36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36"
+                    Point2="0,40"
+                    Point3="4,40" />
+                  <mssgle:LineSegment
+                    End="18,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18,40"
+                    Point2="22,40"
+                    Point3="22,44" />
+                  <mssgle:LineSegment
+                    End="22,72.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
